@@ -1,0 +1,167 @@
+{
+    "menu": [
+      {
+        "name": "Guacamole and Chips",
+        "section": "Appetizers",
+        "description": "Creamy avocado dip made with fresh avocados, tomatoes, onions, cilantro, lime juice, and served with crispy tortilla chips.",
+        "price": 6.99
+      },
+      {
+        "name": "Queso Fundido",
+        "section": "Appetizers",
+        "description": "Melted Oaxaca cheese with your choice of chorizo or mushrooms, served with warm tortillas for dipping.",
+        "price": 8.49
+      },
+      {
+        "name": "Taquitos",
+        "section": "Appetizers",
+        "description": "Crispy rolled corn tortillas filled with seasoned chicken or beef, topped with lettuce, cheese, guacamole, and salsa.",
+        "price": 7.99
+      },
+      {
+        "name": "Ceviche",
+        "section": "Appetizers",
+        "description": "Fresh fish or shrimp marinated in lime juice, mixed with diced tomatoes, onions, cilantro, and avocado. Served chilled with tortilla chips.",
+        "price": 9.99
+      },
+      {
+        "name": "Nachos Supreme",
+        "section": "Appetizers",
+        "description": "A mountain of tortilla chips smothered in melted cheese, topped with your choice of meat or beans, jalapenos, pico de gallo, sour cream, and guacamole.",
+        "price": 10.99
+      },
+      {
+        "name": "Tacos al Pastor",
+        "section": "Small Plates",
+        "description": "Marinated and grilled pork, served in soft corn tortillas with fresh pineapple, onions, and cilantro. A classic street food favorite.",
+        "price": 9.49
+      },
+      {
+        "name": "Chiles Rellenos",
+        "section": "Small Plates",
+        "description": "Roasted poblano peppers stuffed with a savory blend of cheese, then coated in a light egg batter and fried to perfection.",
+        "price": 8.99
+      },
+      {
+        "name": "Sopes",
+        "section": "Small Plates",
+        "description": "Thick handmade corn tortillas topped with refried beans, shredded chicken or beef, lettuce, cheese, sour cream, and salsa.",
+        "price": 7.99
+      },
+      {
+        "name": "Empanadas",
+        "section": "Small Plates",
+        "description": "Golden-fried pastries filled with your choice of beef, chicken, or cheese, served with a side of salsa.",
+        "price": 8.49
+      },
+      {
+        "name": "Mexican Fiesta Platter",
+        "section": "Combinations",
+        "description": "A combination of mini chimichangas, taquitos, and cheese quesadillas, served with guacamole, sour cream, and pico de gallo.",
+        "price": 12.99
+      },
+      {
+        "name": "Enchilada Trio",
+        "section": "Combinations",
+        "description": "Sample three of our delicious enchilada flavors: verde, roja, and mole, served with rice and beans.",
+        "price": 11.99
+      },
+      {
+        "name": "Taco Trio",
+        "section": "Combinations",
+        "description": "Mix and match three tacos of your choice, served with rice and beans.",
+        "price": 10.99
+      },
+      {
+        "name": "Taste of Mexico",
+        "section": "Combinations",
+        "description": "Experience the flavors of Mexico with a tamale, chile relleno, and carne asada, served with rice and beans.",
+        "price": 13.99
+      },
+      {
+        "name": "Enchiladas Verdes",
+        "section": "Main Courses",
+        "description": "Corn tortillas rolled and filled with shredded chicken, topped with a tangy green tomatillo sauce, melted cheese, and a dollop of sour cream.",
+        "price": 11.99
+      },
+      {
+        "name": "Carne Asada",
+        "section": "Main Courses",
+        "description": "Grilled and thinly sliced marinated steak, served with rice, beans, guacamole, and tortillas. A hearty and flavorful main course.",
+        "price": 14.99
+      },
+      {
+        "name": "Burritos",
+        "section": "Main Courses",
+        "description": "Large flour tortillas filled with your choice of grilled chicken, beef, or vegetables, along with rice, beans, cheese, sour cream, and salsa.",
+        "price": 12.99
+      },
+      {
+        "name": "Pozole",
+        "section": "Main Courses",
+        "description": "Traditional Mexican soup made with hominy, tender pork, and a flavorful broth, garnished with shredded cabbage, radishes, and lime.",
+        "price": 9.99
+      },
+      {
+        "name": "Tamales",
+        "section": "Main Courses",
+        "description": "Traditional Mexican cornmeal dumplings filled with seasoned chicken or pork, wrapped in corn husks and steamed to perfection.",
+        "price": 10.49
+      },
+      {
+        "name": "Chimichangas",
+        "section": "Main Courses",
+        "description": "Deep-fried flour tortillas filled with your choice of shredded beef or chicken, topped with melted cheese, lettuce, salsa, and sour cream.",
+        "price": 11.49
+      },
+      {
+        "name": "Mole Poblano",
+        "section": "Main Courses",
+        "description": "Tender chicken smothered in a rich and complex mole sauce made with chili peppers, chocolate, and spices, served with rice and warm tortillas.",
+        "price": 13.99
+      },
+      {
+        "name": "Mexican Rice",
+        "section": "Sides",
+        "description": "Fluffy rice cooked with tomatoes, onions, and spices.",
+        "price": 3.49
+      },
+      {
+        "name": "Refried Beans",
+        "section": "Sides",
+        "description": "Pinto beans cooked until creamy and seasoned to perfection.",
+        "price": 3.49
+      },
+      {
+        "name": "Churros",
+        "section": "Desserts",
+        "description": "Fried dough pastries coated in cinnamon sugar, served with chocolate dipping sauce.",
+        "price": 4.49
+      },
+      {
+        "name": "Tres Leches Cake",
+        "section": "Desserts",
+        "description": "Light and moist sponge cake soaked in three kinds of milk and topped with whipped cream and strawberries.",
+        "price": 5.49
+      },
+      {
+        "name": "Horchata",
+        "section": "Beverages",
+        "description": "Sweet and creamy rice-based drink flavored with cinnamon and vanilla.",
+        "price": 2.99
+      },
+      {
+        "name": "Agua Fresca",
+        "section": "Beverages",
+        "description": "Refreshing fruit-infused water in flavors like watermelon, pineapple, or hibiscus.",
+        "price": 2.49
+      },
+      {
+        "name": "Mexican Soda",
+        "section": "Beverages",
+        "description": "Imported sodas in various flavors like Jarritos, Sidral Mundet, or Coca-Cola Mexicana.",
+        "price": 2.49
+      }
+    ]
+  }
+  
