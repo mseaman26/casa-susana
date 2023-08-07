@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
@@ -11,6 +11,10 @@ function App() {
 
   const [order, setOrder] = useState(JSON.parse(localStorage.getItem('order'))|| {})
     console.log(order)
+  
+  useEffect(() => {
+    localStorage.setItem('order', JSON.stringify(order))
+}, [order])
 
   return (
     <Router>

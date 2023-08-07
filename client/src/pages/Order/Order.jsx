@@ -28,9 +28,7 @@ const Order = function ({ order, setOrder }){
         return subtotal
     }
 
-    useEffect(() => {
-        localStorage.setItem('order', JSON.stringify(order))
-    }, [order])
+    
     return(
         <>
         <h1 id='online_order_header'>Place Order Online </h1>
