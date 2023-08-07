@@ -21,6 +21,7 @@ const Order = function ({ order, setOrder }){
             for(let i = 0; i < menuData.length; i++){
                 if(menuData[i].name === item){
                     subtotal += menuData[i].price * order[item]
+                    break
                 }
             }
         }
