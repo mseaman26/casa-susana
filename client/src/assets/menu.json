@@ -1,5 +1,4 @@
-{
-    "menu": [
+[
       {
         "name": "Guacamole and Chips",
         "section": "Appetizers",
@@ -163,5 +162,5 @@
         "price": 2.49
       }
     ]
-  }
+
   
