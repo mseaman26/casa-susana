@@ -33,6 +33,21 @@ const ReviewOrder = function ({ order, setOrder }){
             }
         }
     }
+    const getSubtotal = () => {
+        let subtotal = 0.00
+        for(let item in order){
+            for(let i = 0; i < menuData.length; i++){
+                if(menuData[i].name === item){
+                    subtotal += menuData[i].price * order[item]
+                    break
+                }
+            }
+        }
+        return subtotal.toFixed(2)
+    }
+    let subTotal = getSubtotal()
+    let tax = (subTotal * .0725).toFixed(2)
+    let GrandTotal = (parseFloat(subTotal) + parseFloat(tax)).toFixed(2)
 
     return(
         <>
@@ -49,6 +64,9 @@ const ReviewOrder = function ({ order, setOrder }){
                     
                 )
             })}
+            <h1>Subtotal: {subTotal}</h1>
+            <h1>Tax: {tax}</h1>
+            <h1>GrandTotal: {GrandTotal}</h1>
         </>
     )
 }
