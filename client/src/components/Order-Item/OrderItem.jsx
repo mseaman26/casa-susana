@@ -1,8 +1,5 @@
 import React from "react";
 
-
-
-
 const OrderItem = function({ menuItem, order, setOrder}){
 
     const addItem = () => {
@@ -17,12 +14,11 @@ const OrderItem = function({ menuItem, order, setOrder}){
                 [menuItem.name]: order[menuItem.name] + 1
             }))
         }
-        localStorage.setItem('order', JSON.stringify(order))
     }
 
     return(
         <>
-        <h1>{menuItem.name}</h1>
+        <h1>{menuItem.name}: ${menuItem.price}</h1>
         <p>{`${menuItem.description}`}</p>
         <button onClick={addItem}>Add to cart</button>
         </>
