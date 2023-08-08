@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 
 const ReviewOrder = function ({ order, setOrder }){
 
-    const orderArray = []
+    let orderArray = []
+    console.log(order)
+
     for(let orderItem in order){
         orderArray.push({name: orderItem, quantity: order[orderItem]})
-
     }
+
+    
     console.log(orderArray)
 
     const addOne = (itemName) => {
@@ -45,14 +48,21 @@ const ReviewOrder = function ({ order, setOrder }){
         }
         return subtotal.toFixed(2)
     }
+
+    const clearOrderArray = () => {
+        orderArray = []
+    }
+
     let subTotal = getSubtotal()
     let tax = (subTotal * .0725).toFixed(2)
     let GrandTotal = (parseFloat(subTotal) + parseFloat(tax)).toFixed(2)
 
+
+
     return(
         <>
             <h1>Your Order</h1>
-            <Link to='/order'>Continue Ordering</Link>
+            <Link onClick={clearOrderArray} to='/order'>Continue Ordering</Link>
             {orderArray.map((orderItem, index) => {
                 let prices = getPrices(orderItem.name, orderItem.quantity )
                 return(

@@ -25,7 +25,7 @@ function App() {
         <Route path='/menu' element={<Menu/>}></Route>
         <Route path='/order' element={<Order order={order} setOrder={setOrder}/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/review' element={<ReviewOrder order={order} setOrder={setOrder}/>}></Route>
+        <Route path='/order/review' element={<ReviewOrder order={order} setOrder={setOrder}/>}></Route>
       </Routes>
     </Router>
   )

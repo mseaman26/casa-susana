@@ -45,7 +45,7 @@ const Order = function ({ order, setOrder }){
             <div id='cart_info'>
                 <h3><span>{'<'}shopping cart icon{'>'}: {getOrderQuantity()},</span><span> Subtotal: ${getSubtotal().toFixed(2)}</span></h3>
                 <h3></h3>
-                <Link to={'/review'}>Review Order</Link>
+                <Link to={'/order/review'}>Review Order</Link>
             </div>
         </div>
         <div className="order_items_container">
