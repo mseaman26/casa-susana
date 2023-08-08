@@ -18,7 +18,7 @@ const OrderItem = function({ menuItem, order, setOrder}){
 
     return(
         <>
-        <h1>{menuItem.name}: ${menuItem.price}</h1>
+        <h3>{menuItem.name}: ${menuItem.price}</h3>
         <p>{`${menuItem.description}`}</p>
         <button onClick={addItem}>Add to cart</button>
         </>

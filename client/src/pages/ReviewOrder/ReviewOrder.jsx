@@ -58,8 +58,8 @@ const ReviewOrder = function ({ order, setOrder }){
                 return(
                     <div key={index}>
                     <h3>{orderItem.name}: Quantity: {orderItem.quantity}, Price: {prices[0]}, Item Total: {prices[1]}</h3>
-                    <button onClick={() => addOne(orderItem.name)}>+</button>
                     <button onClick={() => removeOne(orderItem.name)}>-</button>
+                    <button onClick={() => addOne(orderItem.name)}>+</button>
                     </div>
                     
                 )

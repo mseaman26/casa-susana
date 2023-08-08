@@ -28,6 +28,16 @@ const Order = function ({ order, setOrder }){
         return subtotal
     }
 
+     // Group menu items by section
+     const groupedMenuData = {};
+     menuData.forEach(menuItem => {
+         const { section } = menuItem;
+         if (!groupedMenuData[section]) {
+             groupedMenuData[section] = [];
+         }
+         groupedMenuData[section].push(menuItem);
+     });
+
     
     return(
         <>
@@ -37,11 +47,14 @@ const Order = function ({ order, setOrder }){
             <h3>Subtotal: ${getSubtotal().toFixed(2)}</h3>
             <Link to={'/review'}>Review Order</Link>
         </div>
-        {menuData.map((menuItem, index) => {
-            return(
-                <OrderItem menuItem={menuItem} key={index} order={order} setOrder={setOrder}/>
-            )
-        })}
+        {Object.keys(groupedMenuData).map(section => (
+            <div key={section} className="order_section">
+                <h2>{section}</h2>
+                {groupedMenuData[section].map((menuItem, index) => (
+                    <OrderItem menuItem={menuItem} key={index} order={order} setOrder={setOrder}/>
+                ))}
+            </div>
+        ))}
         </>
     )
 }

@@ -4,3 +4,6 @@
 #cart_info{
     text-align: center;
 }
+.order_section{
+    border-bottom: solid black 2px;
+}
