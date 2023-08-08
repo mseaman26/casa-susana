@@ -56,10 +56,10 @@ const ReviewOrder = function ({ order, setOrder }){
             {orderArray.map((orderItem, index) => {
                 let prices = getPrices(orderItem.name, orderItem.quantity )
                 return(
-                    <div key={index}>
-                    <h3>{orderItem.name}: Quantity: {orderItem.quantity}, Price: {prices[0]}, Item Total: {prices[1]}</h3>
-                    <button onClick={() => removeOne(orderItem.name)}>-</button>
-                    <button onClick={() => addOne(orderItem.name)}>+</button>
+                    <div key={index} className="review_item">
+                        <h3>{orderItem.name}: Quantity: {orderItem.quantity}, Price: {prices[0]}, Item Total: {prices[1]}</h3>
+                        <button onClick={() => removeOne(orderItem.name)}>-</button>
+                        <button onClick={() => addOne(orderItem.name)}>+</button>
                     </div>
                     
                 )

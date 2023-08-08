@@ -6,6 +6,7 @@ import Menu from './pages/Menu/Menu';
 import Order from './pages/Order/Order';
 import Contact from './pages/Contact/Contact';
 import ReviewOrder from './pages/ReviewOrder/ReviewOrder';
+import './App.css'
 
 function App() {
 

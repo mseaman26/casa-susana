@@ -1,8 +1,17 @@
-#online_order_header{
+#online_order_heading{
     text-align: center;
+}
+.order_header{
+    width: 100%;
+    position: fixed;
+    top: 18px;
+    background-color: white;
 }
 #cart_info{
     text-align: center;
+}
+.order_items_container{
+    padding-top: 157px;
 }
 .order_section{
     border-bottom: solid black 2px;

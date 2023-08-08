@@ -1,6 +1,7 @@
 import React from "react";
 import menuData from '../../assets/menu.json'
 import MenuItem from "../../components/MenuItem/MenuItem";
+import './Menu.css'
 
 const Menu = function(){
 
@@ -15,15 +16,18 @@ const Menu = function(){
 
     return(
         <>
+        <div className="menu_page_container">
         <h1>Menu</h1>
-        {Object.keys(groupedMenuData).map(section => (
-            <div key={section} className="menu_section">
-                <h2>{section}</h2>
-                {groupedMenuData[section].map((menuItem, index) => (
-                    <MenuItem menuItem={menuItem} key={index} />
-                ))}
-            </div>
-        ))}
+        
+            {Object.keys(groupedMenuData).map(section => (
+                <div key={section} className="menu_section">
+                    <h2>{section}</h2>
+                    {groupedMenuData[section].map((menuItem, index) => (
+                        <MenuItem menuItem={menuItem} key={index} />
+                    ))}
+                </div>
+            ))}
+        </div>
         </>
     )
 }

@@ -11,7 +11,6 @@ const Order = function ({ order, setOrder }){
         let quantity = 0
         for(let item in order){
             quantity += order[item]
-            console.log(quantity)
         }
         return quantity
     }
@@ -41,20 +40,24 @@ const Order = function ({ order, setOrder }){
     
     return(
         <>
-        <h1 id='online_order_header'>Place Order Online </h1>
-        <div id='cart_info'>
-            <h3>{'<'}shopping cart icon{'>'}: {getOrderQuantity()}</h3>
-            <h3>Subtotal: ${getSubtotal().toFixed(2)}</h3>
-            <Link to={'/review'}>Review Order</Link>
-        </div>
-        {Object.keys(groupedMenuData).map(section => (
-            <div key={section} className="order_section">
-                <h2>{section}</h2>
-                {groupedMenuData[section].map((menuItem, index) => (
-                    <OrderItem menuItem={menuItem} key={index} order={order} setOrder={setOrder}/>
-                ))}
+        <div className="order_header">
+            <h1 id='online_order_heading'>Place Order Online </h1>
+            <div id='cart_info'>
+                <h3><span>{'<'}shopping cart icon{'>'}: {getOrderQuantity()},</span><span> Subtotal: ${getSubtotal().toFixed(2)}</span></h3>
+                <h3></h3>
+                <Link to={'/review'}>Review Order</Link>
             </div>
-        ))}
+        </div>
+        <div className="order_items_container">
+            {Object.keys(groupedMenuData).map(section => (
+                <div key={section} className="order_section" id={section}>
+                    <h2>{section}</h2>
+                    {groupedMenuData[section].map((menuItem, index) => (
+                        <OrderItem menuItem={menuItem} key={index} order={order} setOrder={setOrder}/>
+                    ))}
+                </div>
+            ))}
+        </div>
         </>
     )
 }
