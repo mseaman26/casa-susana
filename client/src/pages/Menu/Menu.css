@@ -1,3 +1,11 @@
 .menu_page_container{
-    padding-top: 18px;
+    padding-top: 10px;
+}
+.menu_header{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+}
+.menu_items_container{
+    padding-top: 120px;
 }
