@@ -49,9 +49,7 @@ const ReviewOrder = function ({ order, setOrder }){
         return subtotal.toFixed(2)
     }
 
-    const clearOrderArray = () => {
-        orderArray = []
-    }
+    
 
     let subTotal = getSubtotal()
     let tax = (subTotal * .0725).toFixed(2)
@@ -62,7 +60,7 @@ const ReviewOrder = function ({ order, setOrder }){
     return(
         <>
             <h1>Your Order</h1>
-            <Link onClick={clearOrderArray} to='/order'>Continue Ordering</Link>
+            <Link to='/order'>Continue Ordering</Link>
             {orderArray.map((orderItem, index) => {
                 let prices = getPrices(orderItem.name, orderItem.quantity )
                 return(
