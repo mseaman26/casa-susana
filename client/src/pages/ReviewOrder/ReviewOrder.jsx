@@ -29,6 +29,13 @@ const ReviewOrder = function ({ order, setOrder }){
         }
     }
 
+    const clearItem = (itemName) => {
+        console.log(itemName)
+        const updatedOrder = {...order}
+        delete updatedOrder[itemName]
+        setOrder(updatedOrder)
+    }
+
     const getPrices = (itemName, quantity) =>{
         for(let i = 0; i <menuData.length; i ++){
             if(menuData[i].name === itemName){
@@ -68,6 +75,7 @@ const ReviewOrder = function ({ order, setOrder }){
                         <h3>{orderItem.name}: Quantity: {orderItem.quantity}, Price: {prices[0]}, Item Total: {prices[1]}</h3>
                         <button onClick={() => removeOne(orderItem.name)}>-</button>
                         <button onClick={() => addOne(orderItem.name)}>+</button>
+                        <button onClick={() => clearItem(orderItem.name)}>Clear Item From Order</button>
                     </div>
                     
                 )
