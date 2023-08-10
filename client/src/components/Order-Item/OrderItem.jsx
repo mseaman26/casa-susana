@@ -21,6 +21,7 @@ const OrderItem = function({ menuItem, order, setOrder}){
         <h3>{menuItem.name}: ${menuItem.price}</h3>
         <p>{`${menuItem.description}`}</p>
         <button onClick={addItem}>Add to cart</button>
+        <p>In your cart: {order[menuItem.name]? order[menuItem.name]: 0}</p>
         </>
     )
 }
