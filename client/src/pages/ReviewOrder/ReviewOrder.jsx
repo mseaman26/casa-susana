@@ -11,9 +11,6 @@ const ReviewOrder = function ({ order, setOrder }){
         orderArray.push({name: orderItem, quantity: order[orderItem]})
     }
 
-    
-    console.log(orderArray)
-
     const addOne = (itemName) => {
         setOrder ((prevState) => ({
             ...prevState,
@@ -83,6 +80,9 @@ const ReviewOrder = function ({ order, setOrder }){
             <h1>Subtotal: {subTotal}</h1>
             <h1>Tax: {tax}</h1>
             <h1>GrandTotal: {GrandTotal}</h1>
+            {orderArray.length > 0 ? (
+                <Link to={'/order/checkout'}>Proceed to Checkout</Link>
+            ): <></>}
         </>
     )
 }

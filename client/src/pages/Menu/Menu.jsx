@@ -4,6 +4,7 @@ import MenuItem from "../../components/MenuItem/MenuItem";
 import './Menu.css'
 import { animateScroll as scroll, scroller } from "react-scroll";
 
+
 const Menu = function(){
 
     const groupedMenuData = {};

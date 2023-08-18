@@ -1,8 +1,5 @@
 
-.fixed_top{
-  position: fixed;
-  top: 0;
-  background-color: white;
-  z-index: 1;
+:root {
+  --header_color: rgb(149, 194, 70); /* Example variable for primary color */
 }
 
