@@ -14,6 +14,22 @@ function Header() {
       setMenuOpen(false)
     }
 
+    const handleMenuOutsideClick = event => {
+        if (!event.target.closest('.bm-menu-wrap')) {
+          setMenuOpen(false);
+        }
+      };
+    
+      useEffect(() => {
+        if (menuOpen) {
+          document.addEventListener('click', handleMenuOutsideClick);
+        }
+    
+        return () => {
+          document.removeEventListener('click', handleMenuOutsideClick);
+        };
+      }, [menuOpen]);
+
     useEffect(() => {
         function handleResize() {
           setWindowWidth(window.innerWidth);
@@ -23,8 +39,8 @@ function Header() {
         return () => window.removeEventListener('resize', handleResize);
       }, []);
 
-      const showMenu = windowWidth < 890;
-    
+      const showMenu = windowWidth < 1500;
+      //890
     return(
         <>
         
@@ -34,18 +50,18 @@ function Header() {
             </div>
             <div id='nav_right'>
             {showMenu ? (
-                  <Menu className='col-6' right isOpen={menuOpen} onStateChange={(state) => setMenuOpen(state.isOpen)}>
-                    <a className="menu-item" href="/" onClick={closeMenu}>
-                      Home
+                  <Menu className={`col-6 bm-menu-wrap ${menuOpen ? 'bm-menu-open' : ''}`} right isOpen={menuOpen} onStateChange={(state) => setMenuOpen(state.isOpen)} overlay>
+                    <a className="menu-item" href="/menu" onClick={closeMenu}>
+                      MENU
                     </a>
-                    <a className="menu-item" href="/#/projects" onClick={closeMenu}>
-                      Projects
+                    <a className="menu-item" href="/order" onClick={closeMenu}>
+                      ORDER ONLINE
                     </a>
-                    <a className="menu-item" href="/#/resume" onClick={closeMenu}>
-                      Resume
+                    <a className="menu-item" href="/ourstory" onClick={closeMenu}>
+                      OUR STORY
                     </a>
-                    <a className="menu-item" href="/#/contact" onClick={closeMenu}>
-                      Contact
+                    <a className="menu-item" href="/locations" onClick={closeMenu}>
+                      LOCATIONS
                     </a>
                   </Menu>
                    

@@ -1,99 +1,165 @@
-.custom_nav {
-    background-color: var(--header_color);
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    height: 75px;
-}
-
-#nav_left {
-    width: 50%;
-}
-
-#nav_right {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.nav_item_right .nav_link {
-    box-sizing: border-box;
-    text-decoration: none;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    color: #ffffff;
-    font-family: Lato, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-
-}
-
-.nav_item_right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(149, 215, 42);
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-inline: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-    white-space: nowrap;
-    
-}
-#order_online_link_container{
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-#order_online_image{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-inline: 15px;
-    height: 50px;
-    background-color: var(--header_color);
-  
-    transform: translateY(3px);
-}
-nav .nav_item_right a.active {
-    font-weight: bold;
-    color: blue;
-}
-
-#logo {
-    background-color: white;
-    height: 230px;
-    width: 230px;
-    position: fixed;
-    border-radius: 100%;
-}
-.bm-burger-button {
-    position: fixed;
-    width: 40px; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    z-index: 1000; /* Ensure it's above other content */
-
-  }
-.bm-burger-bars {
-background:aliceblue;
-} 
-.bm-menu {
-background-color: white; /* Adjust background color */
-width: 250px; /* Adjust width of the menu */
-}
-
-@media (max-width: 479px) {
-    #logo{
-      width: 140px;
-      height: 140px;
+    .custom_nav {
+        background-color: var(--header_color);
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        height: 75px;
     }
-  }
+
+    #nav_left {
+        width: 50%;
+    }
+
+    #nav_right {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav_item_right .nav_link {
+        box-sizing: border-box;
+        text-decoration: none;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        color: #ffffff;
+        font-family: Lato, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+
+    }
+
+    .nav_item_right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(149, 215, 42);
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-inline: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        
+    }
+    #order_online_link_container{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    #order_online_image{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-inline: 15px;
+        height: 50px;
+        background-color: var(--header_color);
+    
+        transform: translateY(3px);
+    }
+    nav .nav_item_right a.active {
+        font-weight: bold;
+        color: blue;
+    }
+
+    #logo {
+        background-color: white;
+        height: 230px;
+        width: 230px;
+        position: fixed;
+        border-radius: 100%;
+    }
+    .bm-burger-button {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        top: 18px;
+        right: 20px; /* Keep the button on the right */
+        z-index: 1000;
+    }
+    .bm-burger-bars {
+    background:aliceblue;
+    } 
+    
+
+    .bm-cross-button {
+        height: 24px;
+        width: 24px;
+    }
+    .bm-cross {
+    background: #7e8386;
+    }
+    
+ 
+    /* Morph shape necessary with bubble or elastic */
+    .bm-morph-shape {
+        fill: #373a47;
+    }
+    
+    /* Wrapper for item list */
+    .bm-item-list {
+        color: #b8b7ad;
+        padding: 0.8em;
+    }
+    
+    /* Individual item */
+    .bm-item {
+        display: inline-block;
+    }
+    
+    /* Styling of overlay */
+ 
+    .bm-menu-wrap {
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        right: -300px; /* Start the menu off-screen on the right */
+        transition: right 0.3s ease; /* Transition the right property for the menu */
+      }
+    .bm-menu {
+        background-color: var(--header_color);
+        width: 100%;
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
+        right: 0; /* Slide the menu in */
+        transition: right 0.3s ease; /* Transition the right property for the menu */
+        /* Add the following styles for the overlay */
+        &::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+          transition: background-color 0.3s ease; /* Add a smooth transition for the background color */
+          z-index: -1; /* Place the overlay behind the menu */
+          pointer-events: none; /* Prevent clicks on the overlay */
+        }
+      }
+    
+    /* Individual item */
+    .bm-item {
+        display: inline-block;
+        width: 100%;
+        color: #d1d1d1;
+        margin-bottom: 10px;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    
+    .bm-item:hover {
+        color: #ffffff;
+    }
+    @media (max-width: 479px) {
+        #logo{
+        width: 140px;
+        height: 140px;
+        }
+    }
