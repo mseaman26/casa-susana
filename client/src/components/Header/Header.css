@@ -90,6 +90,7 @@
     .bm-cross-button {
         height: 24px;
         width: 24px;
+        transform: translateX(-20px) translateY(20px)
     }
     .bm-cross {
     background: #7e8386;
@@ -122,7 +123,8 @@
         transition: right 0.3s ease; /* Transition the right property for the menu */
       }
     .bm-menu {
-        background-color: var(--header_color);
+
+        background-color: rgb(149, 215, 42);;
         width: 100%;
         padding: 2.5em 1.5em 0;
         font-size: 1.15em;
@@ -147,8 +149,11 @@
     .bm-item {
         display: inline-block;
         width: 100%;
-        color: #d1d1d1;
-        margin-bottom: 10px;
+        color: #ffffff;
+        font-family: Lato, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
         text-align: center;
         text-decoration: none;
         transition: color 0.2s;
