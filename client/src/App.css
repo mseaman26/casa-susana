@@ -1,5 +1,10 @@
 
 :root {
   --header_color: rgb(149, 194, 70); /* Example variable for primary color */
+  --bright_nav_color: rgb(149, 215, 42);
+}
+body{
+  width: 100%;
+  background-color: blue;
 }
 

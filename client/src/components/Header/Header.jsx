@@ -39,7 +39,7 @@ function Header() {
         return () => window.removeEventListener('resize', handleResize);
       }, []);
 
-      const showMenu = windowWidth < 1500;
+      const showMenu = windowWidth < 890;
       //890
     return(
         <>
@@ -67,19 +67,20 @@ function Header() {
                    
                 ) : (
                     <>
-                    <div className='nav_item_right'>
-                    <NavLink to="/menu" activeclassname="active" className='nav_link'>MENU</NavLink>
-                    </div>
-                    <div className='nav_item_right'>
-                        <NavLink to="/contact" activeclassname="active" className='nav_link'>LOCATIONS</NavLink>
-                    </div>
-                    <div className='nav_item_right'>
-                        <NavLink to="/ourstory" activeclassname="active" className='nav_link'>OUR STORY</NavLink>
-                    </div>
+                    
+                    <NavLink to="/menu" activeclassname="active" className='nav_link'>
+                      <div className='nav_item_right'>MENU</div>
+                    </NavLink>
+                    <NavLink to="/contact" activeclassname="active" className='nav_link'>
+                      <div className='nav_item_right'>LOCATIONS</div>
+                    </NavLink>
+                    <NavLink to="/ourstory" activeclassname="active" className='nav_link'>
+                      <div className='nav_item_right'>OUR STORY</div>
+                    </NavLink>
                     <div id='order_online_link_container'>
-                        <NavLink to="/order">
+                        <Link to="/order">
                             <img src={orderOnlineImage} id='order_online_image'/>
-                        </NavLink>
+                        </Link>
                     </div>
                 </>
                 )}
