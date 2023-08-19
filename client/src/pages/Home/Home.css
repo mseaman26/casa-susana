@@ -1,0 +1,16 @@
+#home_page_container{
+
+    margin-top: 70px;
+}
+#civiche_image{
+    margin: none;
+    width: 100%;
+    height: 568px;
+    object-fit: cover;
+}
+#join_the_club{
+    height: 181px;
+    background-color: var(--header_color);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

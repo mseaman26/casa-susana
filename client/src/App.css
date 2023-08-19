@@ -4,7 +4,7 @@
   --bright_nav_color: rgb(149, 215, 42);
 }
 body{
-  width: 100%;
-  background-color: blue;
+  margin: 0px;
+  padding: 0px;
 }
 

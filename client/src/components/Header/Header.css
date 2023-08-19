@@ -37,41 +37,12 @@
         box-sizing: border-box;
         white-space: nowrap;
         padding: 7px;
-        /* box-sizing: border-box;
-        text-decoration: none;
-        text-decoration: none;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        color: #ffffff;
-        font-family: Lato, sans-serif;
-        font-weight: 700;
-        font-size: 24px; */
-
     }
 
-    /* .nav_item_right{
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(149, 215, 42);
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-inline: 5px;
-        padding: 10px;
-        box-sizing: border-box;
-        white-space: nowrap;
-        
-    } */
     #order_online_link_container{
         display: flex;
         align-items: center;
         height: 39px;
-        
-     
     }
     #order_online_image{
         margin-top: auto;
