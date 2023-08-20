@@ -12,9 +12,10 @@ const Home = function() {
                     <h2 id="news_and_offers">*_____* NEWS & OFFERS DELIVERED TO YOUR INBOX</h2>
                 </div>
                 <div id="join_the_club_form" className="col-lg-6">
-                    <div id="club_inputs">
-                        <input></input>
-                        <input></input>
+                    <div id="club_inputs" className="row">
+                        <input className="col-xs-10 col-sm-5" ></input>
+                        
+                        <input className="col-xs-10 col-sm-5"></input>
                     </div>
                     
                     <button id="club_submit">SUBMIT</button>

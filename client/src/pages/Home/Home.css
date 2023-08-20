@@ -31,16 +31,18 @@
     line-height: 1.45;
 }
 #join_the_club_form{
-    padding-block: 55px;
+
 }
 #club_inputs{
     display: flex;
     justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 #club_inputs input{
     border: none;
     border-radius: 3px;
-    margin: 5px;
+    margin: 10px;
 }
 #club_submit{
     width: 100%;
