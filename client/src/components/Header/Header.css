@@ -61,7 +61,6 @@
 
     #logo {
         background-color: white;
-        top: 0;
         height: 230px;
         width: 230px;
         position: relative;
@@ -160,6 +159,7 @@
         #logo{
         width: 140px;
         height: 140px;
+        top: 37px
         }
     }
     @media (max-width: 991px) {
