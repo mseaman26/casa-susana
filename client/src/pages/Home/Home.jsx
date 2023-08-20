@@ -1,6 +1,7 @@
 import React from "react";
 import './Home.css'
 import ceviche from '../../assets/images/civiche.jpeg'
+import tacos from '../../assets/images/tacos_cropped.jpeg'
 
 const Home = function() {
     return(
@@ -14,12 +15,21 @@ const Home = function() {
                 <div id="join_the_club_form" className="col-lg-6">
                     <div id="club_inputs" className="row">
                         <input className="col-xs-10 col-sm-5" ></input>
-                        
                         <input className="col-xs-10 col-sm-5"></input>
                     </div>
-                    
                     <button id="club_submit">SUBMIT</button>
                 </div>
+            </div>
+            <div id="food_sell_div" className="row">
+                <div id="food_sell_text" className='col-6'>
+                    <h1>Flavors of Mexico, Served with Passion</h1>
+                    <p>Indulge in a culinary journey through Mexico's rich flavors. Our restaurant brings the heart and soul of Mexican cuisine to your plate, where each dish is a masterpiece of tradition and taste. </p>
+                    <p>Experience a symphony of vibrant spices and authentic ingredients that come together to create an unforgettable dining adventure.</p>
+                </div>
+                <div id='image_container'className="col-6">
+                    {/* <img id="tacos_image" src={tacos}/> */}
+                </div>
+                    
             </div>
         </div>
     )

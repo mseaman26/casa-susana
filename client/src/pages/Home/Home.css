@@ -1,12 +1,11 @@
 #home_page_container{
-
-    margin-top: 70px;
+    margin: 0px;
+    padding: 0px;
 }
 #civiche_image{
     margin: none;
     width: 100%;
-    height: 568px;
-    object-fit: cover;
+
 }
 #join_the_club{
     background-color: var(--header_color);
@@ -31,18 +30,23 @@
     line-height: 1.45;
 }
 #join_the_club_form{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #club_inputs{
+    margin: 0;
     display: flex;
     justify-content: center;
-    padding-left: 40px;
-    padding-right: 40px;
+
+    width: 100%;
 }
 #club_inputs input{
     border: none;
     border-radius: 3px;
     margin: 10px;
+
 }
 #club_submit{
     width: 100%;
@@ -51,6 +55,21 @@
     font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,sans-serif;
     font-size: 20px;
     color: rgb(255,255,255);
-    font-weight: 900;
+    font-weight: 900; 
     margin-top: 10px;
+}
+
+#food_sell_text{
+  padding: 0;
+  margin: 0;
+}
+#taco_image_container{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+#tacos_image{
+    right: 10px;
+    width: 100;
+    object-fit: cover;
 }
