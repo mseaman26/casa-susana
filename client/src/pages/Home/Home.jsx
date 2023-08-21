@@ -20,14 +20,14 @@ const Home = function() {
                     <button id="club_submit">SUBMIT</button>
                 </div>
             </div>
-            <div id="food_sell_div" className="row">
-                <div id="food_sell_text" className='col-6'>
+            <div id="food_sell_div" >
+                <div id="food_sell_text">
                     <h1>Flavors of Mexico, Served with Passion</h1>
                     <p>Indulge in a culinary journey through Mexico's rich flavors. Our restaurant brings the heart and soul of Mexican cuisine to your plate, where each dish is a masterpiece of tradition and taste. </p>
                     <p>Experience a symphony of vibrant spices and authentic ingredients that come together to create an unforgettable dining adventure.</p>
                 </div>
-                <div id='image_container'className="col-6">
-                    {/* <img id="tacos_image" src={tacos}/> */}
+                <div id='taco_image_container'>
+                   <img id="tacos_image" src={tacos}></img>
                 </div>
                     
             </div>

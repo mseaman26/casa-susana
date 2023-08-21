@@ -58,18 +58,32 @@
     font-weight: 900; 
     margin-top: 10px;
 }
+#food_sell_div{
+    background-color: rgb(201, 201, 201);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 550px;
+    margin-top: 17px;
+}
 
 #food_sell_text{
-  padding: 0;
-  margin: 0;
+
 }
 #taco_image_container{
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
+    display: flex;
+    justify-content: right; 
+    align-items: start;
 }
 #tacos_image{
-    right: 10px;
-    width: 100;
-    object-fit: cover;
+    position: relative;
+    
+    width: 100%; /* Image takes up 100% width of its container */
+    max-height: 550px;/* Image takes up 100% height of its container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+@media screen and (max-width: 768px) {
+    #food_sell_div{
+        display: block;
+    }
 }

@@ -9,7 +9,7 @@ import ReviewOrder from './pages/ReviewOrder/ReviewOrder';
 import Checkout from './pages/Checkout/Checkout';
 //import { AppProvider } from './context/appContext';
 import './App.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
