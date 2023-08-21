@@ -14,8 +14,8 @@ const Home = function() {
                 </div>
                 <div id="join_the_club_form" className="col-lg-6">
                     <div id="club_inputs" className="row">
-                        <input className="col-xs-10 col-sm-5" ></input>
-                        <input className="col-xs-10 col-sm-5"></input>
+                        <input className="col-10 col-sm-5" ></input>
+                        <input className="col-10 col-sm-5"></input>
                     </div>
                     <button id="club_submit">SUBMIT</button>
                 </div>
