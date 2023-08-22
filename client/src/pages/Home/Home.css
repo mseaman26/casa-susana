@@ -58,16 +58,34 @@
     font-weight: 900; 
     margin-top: 10px;
 }
+
 #food_sell_div{
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(229, 229, 229);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 550px;
+    grid-template-rows: fit-content;
     margin-top: 17px;
+    height: fit-content;
 }
 
-#food_sell_text{
-
+#food_sell_text h1{
+    font-family: Lato, sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    line-height: 1.1;
+    text-align: left;
+    color: var(--header_color);
+    font-style: normal;
+    text-transform: uppercase;
+}
+#food_sell_text p{
+    font-size: 30px;
+    color: #332827;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
+    padding: 0;
+    word-wrap: break-word;
 }
 #taco_image_container{
     display: flex;
@@ -81,6 +99,7 @@
     max-height: 550px;/* Image takes up 100% height of its container */
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
+
 
 @media screen and (max-width: 768px) {
     #food_sell_div{

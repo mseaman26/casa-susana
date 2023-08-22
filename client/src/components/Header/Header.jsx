@@ -71,7 +71,7 @@ function Header() {
                     <NavLink to="/menu" activeclassname="active" className='nav_link'>
                       <div className='nav_item_right'>MENU</div>
                     </NavLink>
-                    <NavLink to="/contact" activeclassname="active" className='nav_link'>
+                    <NavLink to="/locations" activeclassname="active" className='nav_link'>
                       <div className='nav_item_right'>LOCATIONS</div>
                     </NavLink>
                     <NavLink to="/ourstory" activeclassname="active" className='nav_link'>

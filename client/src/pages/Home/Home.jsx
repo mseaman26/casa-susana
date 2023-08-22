@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css'
 import ceviche from '../../assets/images/civiche.jpeg'
 import tacos from '../../assets/images/tacos_cropped.jpeg'
+import { NavLink } from "react-router-dom";
 
 const Home = function() {
     return(
