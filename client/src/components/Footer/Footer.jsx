@@ -13,7 +13,7 @@ const Footer = () => {
                 <NavLink className='footer_nav_link' to='/locations' activeclassname="active">LOCATIONS</NavLink>
             </div>
             <p id="copyright">&copy;</p>
-    </nav>
+        </nav>
     )
     
 }
