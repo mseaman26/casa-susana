@@ -14,6 +14,7 @@ function Header() {
 
     const closeMenu = () => {
       setMenuOpen(false)
+      setIsExpanded(false)
     }
 
     const toggleMenuBurgerHeight = () => {
@@ -69,9 +70,9 @@ function Header() {
                   <Menu className={`col-6 bm-menu-wrap ${menuOpen ? 'bm-menu-open' : ''}`} right isOpen={menuOpen} onStateChange={(state) => setMenuOpen(state.isOpen)} overlay>
                     <div className="menu-item" onClick={toggleMenuBurgerHeight} id='menu_burger_nav' href="/menu">
                       MENU
-                      <div id='burger_submenu' style={{ height: isExpanded ? 'fit-content' : '0px' }}>
-                        <div><a>location1</a></div>
-                        <div><a>location1</a></div>
+                      <div id='burger_submenu' style={{ height: isExpanded ? 'fit-content' : '0px', border: isExpanded ? '1px solid black' : 'none', marginTop: isExpanded ? '20px' : '0px' }}>
+                        <div id='burger_location1'><a href='/menu/location1'>location1</a></div>
+                        <div><a href='/menu/loaction2'>location1</a></div>
                       </div>
                     </div>
                     

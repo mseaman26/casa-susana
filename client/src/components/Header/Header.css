@@ -161,13 +161,27 @@
     }
     
     #burger_submenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
         height: 0px;
         overflow: hidden;
-        background-color: blue;
+        background-color: rgb(149, 215, 42);
+        
     }
-    #menu_burger_nav:hover #burger_submenu{
-        display: block;
-
+    #burger_submenu a{
+        display: flex;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #ffffff;
+        margin: 10px;
+        width: 100% !important
+    }
+    #burger_location1{
+        border-bottom: 1px solid white;
     }
     @media (max-width: 479px) {
         #logo{
