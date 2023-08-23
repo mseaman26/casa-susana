@@ -20,8 +20,12 @@
         align-items: center;
         justify-content: flex-end;
     }
+    #nav_right .nav_link:hover{
+        background-color: #ffffff;
+        color: var(--header_color);
+    }
 
-     .nav_link {
+    .nav_link {
         font-family: Lato, sans-serif;
         padding: 0px;
         font-weight: 700;
@@ -154,6 +158,16 @@
     
     .bm-item:hover {
         color: #ffffff;
+    }
+    
+    #burger_submenu{
+        height: 0px;
+        overflow: hidden;
+        background-color: blue;
+    }
+    #menu_burger_nav:hover #burger_submenu{
+        display: block;
+
     }
     @media (max-width: 479px) {
         #logo{

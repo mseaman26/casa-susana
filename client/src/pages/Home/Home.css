@@ -45,8 +45,6 @@
     border: none;
     border-radius: 3px;
     margin: 10px;
-
-
 }
 #club_submit{
     width: 100%;
@@ -68,7 +66,9 @@
     margin-top: 17px;
     height: fit-content;
 }
-
+#food_sell_text{
+    padding: 15px;
+}
 #food_sell_text h1{
     font-family: Lato, sans-serif;
     font-weight: bolder;

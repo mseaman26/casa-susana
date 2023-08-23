@@ -10,9 +10,25 @@ function Header() {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const[menuOpen, setMenuOpen] = useState(false)
+    const [isExpanded, setIsExpanded] = useState(false)
+
     const closeMenu = () => {
       setMenuOpen(false)
     }
+
+    const toggleMenuBurgerHeight = () => {
+      const element = document.getElementById('burger_submenu'); // Change this to your element's ID or ref
+      console.log('toggle function')
+      if (element) {
+        const currentHeight = window.getComputedStyle(element).height;
+        console.log('current height' , currentHeight)
+        if (currentHeight === '0px') {
+          setIsExpanded(true);
+        } else {
+          setIsExpanded(false);
+        }
+      }
+    };
 
     const handleMenuOutsideClick = event => {
         if (!event.target.closest('.bm-menu-wrap')) {
@@ -51,9 +67,14 @@ function Header() {
             <div id='nav_right'>
             {showMenu ? (
                   <Menu className={`col-6 bm-menu-wrap ${menuOpen ? 'bm-menu-open' : ''}`} right isOpen={menuOpen} onStateChange={(state) => setMenuOpen(state.isOpen)} overlay>
-                    <a className="menu-item" href="/menu" onClick={closeMenu}>
+                    <div className="menu-item" onClick={toggleMenuBurgerHeight} id='menu_burger_nav' href="/menu">
                       MENU
-                    </a>
+                      <div id='burger_submenu' style={{ height: isExpanded ? 'fit-content' : '0px' }}>
+                        <div><a>location1</a></div>
+                        <div><a>location1</a></div>
+                      </div>
+                    </div>
+                    
                     <a className="menu-item" href="/order" onClick={closeMenu}>
                       ORDER ONLINE
                     </a>
@@ -68,9 +89,12 @@ function Header() {
                 ) : (
                     <>
                     
-                    <NavLink to="/menu" activeclassname="active" className='nav_link'>
+                    <NavLink to='/menulocations' activeclassname="active" className='nav_link'>
                       <div className='nav_item_right'>MENU</div>
                     </NavLink>
+                    <div id='id_hover_box'>
+
+                    </div>
                     <NavLink to="/locations" activeclassname="active" className='nav_link'>
                       <div className='nav_item_right'>LOCATIONS</div>
                     </NavLink>
