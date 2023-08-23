@@ -178,10 +178,14 @@
         text-decoration: none;
         color: #ffffff;
         margin: 10px;
-        width: 100% !important
+        width: fit-content;
     }
     #burger_location1{
+        display: flex;
+        justify-content: center;
+        
         border-bottom: 1px solid white;
+        width: 100%
     }
     @media (max-width: 479px) {
         #logo{
