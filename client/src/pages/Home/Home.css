@@ -30,6 +30,7 @@
     line-height: 1.45;
 }
 #join_the_club_form{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +47,7 @@
     border-radius: 3px;
     margin: 10px;
 }
+
 #club_submit{
     width: 100%;
     background-color: var(--header_color);
@@ -101,6 +103,11 @@
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 
+@media (max-width: 991px) {
+    #home_page_container {
+        margin-top: var(--header_height);
+    }
+}
 
 @media screen and (max-width: 768px) {
     #food_sell_div{

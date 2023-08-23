@@ -1,0 +1,20 @@
+.menu_item_div{
+    margin-top: 30px;
+}
+.menu_name_price_div{
+    display: flex;
+    justify-content: space-between;
+}
+.menu_item_name, .menu_item_price{
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 18px;
+    color: #545454;
+}
+.menu_item_description{
+    font-weight: lighter;
+    font-family: "Montserrat",sans-serif;;
+    color: #545454;
+    font-size: 15px;
+    font-style: normal;
+}

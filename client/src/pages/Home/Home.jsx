@@ -2,7 +2,6 @@ import React from "react";
 import './Home.css'
 import ceviche from '../../assets/images/civiche.jpeg'
 import tacos from '../../assets/images/tacos_cropped.jpeg'
-import { NavLink } from "react-router-dom";
 
 const Home = function() {
     return(
@@ -15,8 +14,8 @@ const Home = function() {
                 </div>
                 <div id="join_the_club_form" className="col-lg-6">
                     <div id="club_inputs" className="row">
-                        <input className="col-10 col-sm-5" ></input>
-                        <input className="col-10 col-sm-5"></input>
+                        <input className="col-10 col-sm-5 custom_input" ></input>
+                        <input className="col-10 col-sm-5 custom_input"></input>
                     </div>
                     <button id="club_submit">SUBMIT</button>
                 </div>

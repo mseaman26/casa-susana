@@ -3,9 +3,11 @@ import menuData from '../../assets/menu.json'
 import MenuItem from "../../components/MenuItem/MenuItem";
 import './Menu.css'
 import { animateScroll as scroll, scroller } from "react-scroll";
+import civiche from '../../assets/images/civiche.jpeg'
 
 
-const Menu = function(){
+
+const Menu1 = function(){
 
     const groupedMenuData = {};
      menuData.forEach(menuItem => {
@@ -28,7 +30,7 @@ const Menu = function(){
     return(
         <>
         <div className="menu_page_container">
-            <div className="menu_header">
+            {/* <div className="menu_header">
                 <h1>Menu</h1>
                 <div>
                     <button onClick={() => scrollToSection('Appetizers')}>Appetizers</button>
@@ -39,11 +41,12 @@ const Menu = function(){
                     <button onClick={() => scrollToSection('Desserts')}>desserts</button>
                     <button onClick={() => scrollToSection('Beverages')}>Beverages</button>
                 </div>
-            </div>
+            </div> */}
+            <img src={civiche} id="civiche_image_menu"></img>
             <div className="menu_items_container">
                 {Object.keys(groupedMenuData).map(section => (
                     <div key={section} className="menu_section" id={section}>
-                        <h2>{section}</h2>
+                        <h2 className="menu_section_header">{section}</h2>
                         {groupedMenuData[section].map((menuItem, index) => (
                             <MenuItem menuItem={menuItem} key={index} />
                         ))}
@@ -55,4 +58,4 @@ const Menu = function(){
     )
 }
 
-export default Menu
+export default Menu1
