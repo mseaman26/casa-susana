@@ -8,6 +8,7 @@ const OrderLocations = () => {
         <div id="order_locations_page">
             <div id="order_online_page_image_container">
                 <img src={civiche} id="order_online_page_image"></img>
+                <h1>ORDER ONLINE</h1>
             </div>
         </div>
         <div id="order_locations_info">
