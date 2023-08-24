@@ -76,7 +76,7 @@ function Header() {
                       </div>
                     </div>
                     
-                    <a className="menu-item" href="/order" onClick={closeMenu}>
+                    <a className="menu-item" href="/orderlocations" onClick={closeMenu}>
                       ORDER ONLINE
                     </a>
                     <a className="menu-item" href="/ourstory" onClick={closeMenu}>
@@ -103,7 +103,7 @@ function Header() {
                       <div className='nav_item_right'>OUR STORY</div>
                     </NavLink>
                     <div id='order_online_link_container'>
-                        <Link to="/order">
+                        <Link to="/orderlocations">
                             <img src={orderOnlineImage} id='order_online_image'/>
                         </Link>
                     </div>
