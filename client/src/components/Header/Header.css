@@ -15,6 +15,7 @@
     }
 
     #nav_right {
+        
         width: 50%;
         display: flex;
         align-items: center;
@@ -26,6 +27,8 @@
     }
 
     .nav_link {
+        position: relative;
+        box-sizing: border-box;
         font-family: Lato, sans-serif;
         padding: 0px;
         font-weight: 700;
@@ -42,6 +45,9 @@
         box-sizing: border-box;
         white-space: nowrap;
         padding: 7px;
+    }
+    .nav_item_right{
+        box-sizing: border-box;
     }
 
     #order_online_link_container{
