@@ -18,7 +18,7 @@ const OrderLocations = () => {
                 <div className="order_location_choice">
                     <h1>Location 1</h1>
                     <p>street address<br/>city state<br/>1(555)-555-5555</p>
-                    <Link to='/orderloactions/location1' className="order_location_link">ORDER NOW</Link> 
+                    <Link to='/orderlocations/location1' className="order_location_link">ORDER NOW</Link> 
                 </div>
                 <div className="order_location_choice">
                     <h1>Location 2</h1>
