@@ -99,7 +99,7 @@ function Header() {
                 ) : (
                     <>
                     <div onMouseEnter={handleNavMenuHover} onMouseLeave={handleNavMenuMouseLeave}>
-                    <NavLink to='/menulocations'  activeclassname="active" className='nav_link'>
+                    <NavLink to='/menu'  activeclassname="active" className='nav_link' onClick={(e) => e.preventDefault()}>
                       <div className='nav_item_right'>MENU
                       {isNavMenuOpen && <NavMenuDropBox  id='nav_menu_drop_box' isNavMenuOpen={isNavMenuOpen} setIsNavMenuOpen={setIsNavMenuOpen}/>}
                       </div>
