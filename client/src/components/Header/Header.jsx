@@ -3,18 +3,27 @@ import { NavLink, Link } from 'react-router-dom';
 import './Header.css'
 import logo_placeholder from '../../assets/images/logo_placeholder.png'
 import orderOnlineImage from '../../assets/images/order-now.png'
+import NavMenuDropBox from '../NavMenuDropBox/NavMenuDropBox';
 import { slide as Menu } from 'react-burger-menu';
 
 
 function Header() {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const[menuOpen, setMenuOpen] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
+    const [isNavMenuOpen, setIsNavMenuOpen] = useState(false)
     const [isExpanded, setIsExpanded] = useState(false)
 
     const closeMenu = () => {
       setMenuOpen(false)
       setIsExpanded(false)
+    }
+
+    const handleNavMenuHover = () => {
+      setIsNavMenuOpen(true)
+    }
+    const handleNavMenuMouseLeave = () => {
+      setIsNavMenuOpen(false);
     }
 
     const toggleMenuBurgerHeight = () => {
@@ -89,12 +98,11 @@ function Header() {
                    
                 ) : (
                     <>
-                    
-                    <NavLink to='/menulocations' activeclassname="active" className='nav_link'>
+                    <div onMouseEnter={handleNavMenuHover} onMouseLeave={handleNavMenuMouseLeave}>
+                    <NavLink to='/menulocations'  activeclassname="active" className='nav_link'>
                       <div className='nav_item_right'>MENU</div>
+                      {isNavMenuOpen && <NavMenuDropBox  id='nav_menu_drop_box' isNavMenuOpen={isNavMenuOpen} setIsNavMenuOpen={setIsNavMenuOpen}/>}
                     </NavLink>
-                    <div id='id_hover_box'>
-
                     </div>
                     <NavLink to="/locations" activeclassname="active" className='nav_link'>
                       <div className='nav_item_right'>LOCATIONS</div>
