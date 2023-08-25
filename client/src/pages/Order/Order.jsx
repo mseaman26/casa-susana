@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import menuData from '../../assets/menu.json'
+import React from "react";
+
 import './Order.css'
 import OrderItem from "../../components/Order-Item/OrderItem";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 
-const Order = function ({ order, setOrder }){
+const Order = function ({ order, setOrder, menuData }){
 
 
     const getOrderQuantity = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import menuData from '../../assets/menu.json'
+
 import MenuItem from "../../components/MenuItem/MenuItem";
 import './Menu.css'
 import { animateScroll as scroll, scroller } from "react-scroll";
@@ -7,7 +7,7 @@ import civiche from '../../assets/images/civiche.jpeg'
 
 
 
-const Menu1 = function(){
+const Menu = function({menuData}){
 
     const groupedMenuData = {};
      menuData.forEach(menuItem => {
@@ -58,4 +58,4 @@ const Menu1 = function(){
     )
 }
 
-export default Menu1
+export default Menu

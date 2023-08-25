@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import menuData from '../../assets/menu.json'
 import { Link } from "react-router-dom";
 
-const ReviewOrder = function ({ order, setOrder }){
+const ReviewOrder = function ({ order, setOrder, menuData }){
 
     let orderArray = []
     console.log(order)
