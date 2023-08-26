@@ -8,7 +8,7 @@ import menuData1 from '../../assets/menu1.json'
 const OrderLocations = ({order, setOrder}) => {
     return(
         <>
-        <Order menuData={menuData1} order={order} setOrder={setOrder} />
+        {/* <Order menuData={menuData1} order={order} setOrder={setOrder} /> */}
         <div id="order_locations_page">
             <div id="order_online_page_image_container">
                 <img src={civiche} id="order_online_page_image"></img>
