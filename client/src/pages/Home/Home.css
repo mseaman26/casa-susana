@@ -5,9 +5,12 @@
 #civiche_image{
     margin: none;
     width: 100%;
+    max-height: 650px;
+    object-fit: cover;
 
 }
 #join_the_club{
+    display: flex;
     width: 100%;
     background-color: var(--header_color);
     margin-top: 17px;
@@ -58,7 +61,7 @@
     color: rgb(255,255,255);
     font-weight: 900; 
     margin-top: 10px;
-    margin-bottom: 30px;
+
 }
 
 #food_sell_div{
@@ -115,3 +118,14 @@
         display: block;
     }
 }
+@media screen and (max-width: 992px){
+    #join_the_club{
+        display: block;
+    }
+}
+@media screen and (max-width: 992px) {
+   #club_submit{
+    margin-bottom: 30px;
+   } 
+}
+    
