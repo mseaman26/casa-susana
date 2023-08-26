@@ -8,6 +8,7 @@
 
 }
 #join_the_club{
+    width: 100%;
     background-color: var(--header_color);
     margin-top: 17px;
 }

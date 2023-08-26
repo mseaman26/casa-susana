@@ -32,7 +32,7 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           {/* <Route path='/menu' element={<Menu/>}></Route> */}
           <Route path='/menu/location1' element={<Menu menuData={menuData1}/>}></Route>
-          <Route path='/orderlocations' element={<OrderLocations/>}></Route>
+          <Route path='/orderlocations' element={<OrderLocations order={order} setOrder={setOrder}/>}></Route>
           <Route path='/orderlocations/location1' element={<Order order={order} setOrder={setOrder} menuData={menuData1}/>}></Route>
           <Route path='/locations' element={<Contact/>}></Route>
           <Route path='/order/review' element={<ReviewOrder order={order} setOrder={setOrder} menuData={menuData1}/>}></Route>
