@@ -1,8 +1,22 @@
+#overlay_container{
+    display: flex;
+    justify-content: center;
+}
+
+#order_container{
+    position: absolute;
+    height: 90vh;
+    width: 80vw;
+    overflow: scroll;
+    background-color: white;
+    z-index: 5000;
+}
+
 #online_order_heading{
     text-align: center;
 }
 .order_header{
-    width: 100%;
+    width: 80vw;
     position: fixed;
     top: 18px;
     background-color: white;

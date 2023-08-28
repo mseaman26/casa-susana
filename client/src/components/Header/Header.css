@@ -68,7 +68,9 @@
         font-weight: bold;
         color: var(--bright_nav_color)
     }
-
+    .menu-item{
+        cursor: pointer;
+    }
     #logo {
         background-color: white;
         height: 230px;
