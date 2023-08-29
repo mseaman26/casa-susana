@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import './Order.css'
 import OrderItem from "../../components/Order-Item/OrderItem";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
+import shoppingCartImage from '../../assets/images/shoppingCart.png'
 
 
 const Order = function ({ order, setOrder, menuData }){
 
+    const [currentTab, setCurrentTab] = useState('order')
 
     const getOrderQuantity = () => {
         let quantity = 0
@@ -55,18 +57,18 @@ const Order = function ({ order, setOrder, menuData }){
                 <div className="order_header">
                     <h1 id='online_order_heading'>Place Order Online </h1>
                     <div id='cart_info'>
-                        {'<'}shopping cart icon{'>'}: {getOrderQuantity()}, Subtotal: ${getSubtotal().toFixed(2)}<Link to={'/order/review'}>Review Order</Link>
+                        {/* {'<'}shopping cart icon{'>'}: {getOrderQuantity()}, Subtotal: ${getSubtotal().toFixed(2)} */}
+                        <img id="shopping_cart" src={shoppingCartImage} onClick={()=>setCurrentTab('review')}/>
+                        {getOrderQuantity() > 0 ? (
+                            <div id="cart_quantity">{getOrderQuantity()}</div>
+                        ) : <></>}
+                        
                     </div>
-                    {/* <div>
-                        <button onClick={() => scrollToSection('Appetizers')}>Appetizers</button>
-                        <button onClick={() => scrollToSection('Small Plates')}>Small Plates</button>
-                        <button onClick={() => scrollToSection('Combinations')}>Combinations</button>
-                        <button onClick={() => scrollToSection('Main Courses')}>Main Courses</button>
-                        <button onClick={() => scrollToSection('Sides')}>Sides</button>
-                        <button onClick={() => scrollToSection('Desserts')}>desserts</button>
-                        <button onClick={() => scrollToSection('Beverages')}>Beverages</button>
-                    </div> */}
                 </div>
+                {/* order tab */}
+                {currentTab === 'order'? (
+                    <>
+                   
                 <div className="order_items_container">
                     {Object.keys(groupedMenuData).map(section => (
                         <div key={section} className="order_section" id={section}>
@@ -77,6 +79,31 @@ const Order = function ({ order, setOrder, menuData }){
                         </div>
                     ))}
                 </div>
+                </>
+                ) : <></>}
+                {/* review Tab */}
+                {currentTab === 'review'? (
+                    <div id="review_tab_container">
+                        <h1>Review Order Top</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                        <h1>Review Order</h1>
+                    </div>
+                ) : <></>}
             </div>
         </div>
         </>

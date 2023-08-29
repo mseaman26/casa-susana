@@ -4,6 +4,7 @@ import civiche from '../../assets/images/civiche.jpeg'
 import { Link } from "react-router-dom";
 import Order from "../Order/Order";
 import menuData1 from '../../assets/menu1.json'
+import shoppingCartImage from '../../assets/images/shoppingCart.png'
 
 const OrderLocations = ({order, setOrder}) => {
 
