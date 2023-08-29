@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './Order.css'
 import OrderItem from "../../components/Order-Item/OrderItem";
+import ReviewOrder from '../../pages/ReviewOrder/ReviewOrder'
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import shoppingCartImage from '../../assets/images/shoppingCart.png'
@@ -58,10 +59,12 @@ const Order = function ({ order, setOrder, menuData }){
                     <h1 id='online_order_heading'>Place Order Online </h1>
                     <div id='cart_info'>
                         {/* {'<'}shopping cart icon{'>'}: {getOrderQuantity()}, Subtotal: ${getSubtotal().toFixed(2)} */}
-                        <img id="shopping_cart" src={shoppingCartImage} onClick={()=>setCurrentTab('review')}/>
-                        {getOrderQuantity() > 0 ? (
+                        <div id="car_icon_container" className="order_nav_item" onClick={()=>setCurrentTab('review')}>
+                            <img id="shopping_cart" src={shoppingCartImage} />
+                            {getOrderQuantity() > 0 ? (
                             <div id="cart_quantity">{getOrderQuantity()}</div>
-                        ) : <></>}
+                            ) : <></>}
+                        </div>
                         
                     </div>
                 </div>
@@ -84,24 +87,7 @@ const Order = function ({ order, setOrder, menuData }){
                 {/* review Tab */}
                 {currentTab === 'review'? (
                     <div id="review_tab_container">
-                        <h1>Review Order Top</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
-                        <h1>Review Order</h1>
+                       <ReviewOrder order={order} setOrder={setOrder} menuData={menuData}/>
                     </div>
                 ) : <></>}
             </div>
