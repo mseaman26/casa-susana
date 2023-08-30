@@ -60,11 +60,10 @@ const Order = function ({ order, setOrder, menuData }){
                 <div className="order_header">
                     <h1 id='online_order_heading'>Place Order Online </h1>
                     <div id='cart_info'>
-                        {/* {'<'}shopping cart icon{'>'}: {getOrderQuantity()}, Subtotal: ${getSubtotal().toFixed(2)} */}
-                        <div id="menu_icon_container" className="order_nav_item" onClick={()=>setCurrentTab('order')}>
+                        <div id="menu_icon_container" className={`${currentTab === 'order'? 'order_nav_active' : "order_nav_item "}`} onClick={()=>setCurrentTab('order')}>
                             <img src={menuIcon} id="menu_icon"/>
                         </div>
-                        <div id="cart_icon_container" className="order_nav_item" onClick={()=>setCurrentTab('review')}>
+                        <div id="cart_icon_container" className={`order_nav_item ${currentTab === 'review'? 'order_nav_active' : ""}`} onClick={()=>setCurrentTab('review')}>
                             <img id="shopping_cart" src={shoppingCartImage} />
                             {getOrderQuantity() > 0 ? (
                             <div id="cart_quantity">{getOrderQuantity()}</div>

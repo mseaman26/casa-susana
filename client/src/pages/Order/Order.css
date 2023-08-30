@@ -57,6 +57,18 @@
     justify-content: center;
     align-items: center;
 }
+.order_nav_active{
+    background-color:rgba(214, 214, 214, 0.93);
+    border-left: 1px solid rgb(188, 188, 188);
+    border-bottom: 1px solid rgb(188, 188, 188);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70px;
+    height: 100%;
+    cursor:pointer;
+}
 .order_nav_item{
     border-left: 1px solid rgb(188, 188, 188);
     display: flex;
@@ -65,7 +77,9 @@
     height: 100%;
     width: 70px;
     height: 100%;
+    cursor:pointer;
 }
+
 #menu_icon{
     width: 40px;
 }
