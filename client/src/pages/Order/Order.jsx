@@ -5,6 +5,8 @@ import ReviewOrder from '../../pages/ReviewOrder/ReviewOrder'
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import shoppingCartImage from '../../assets/images/shoppingCart.png'
+import menuIcon from '../../assets/images/menu_icon.png'
+import civiche from '../../assets/images/civiche.jpeg'
 
 
 const Order = function ({ order, setOrder, menuData }){
@@ -59,7 +61,10 @@ const Order = function ({ order, setOrder, menuData }){
                     <h1 id='online_order_heading'>Place Order Online </h1>
                     <div id='cart_info'>
                         {/* {'<'}shopping cart icon{'>'}: {getOrderQuantity()}, Subtotal: ${getSubtotal().toFixed(2)} */}
-                        <div id="car_icon_container" className="order_nav_item" onClick={()=>setCurrentTab('review')}>
+                        <div id="menu_icon_container" className="order_nav_item" onClick={()=>setCurrentTab('order')}>
+                            <img src={menuIcon} id="menu_icon"/>
+                        </div>
+                        <div id="cart_icon_container" className="order_nav_item" onClick={()=>setCurrentTab('review')}>
                             <img id="shopping_cart" src={shoppingCartImage} />
                             {getOrderQuantity() > 0 ? (
                             <div id="cart_quantity">{getOrderQuantity()}</div>
@@ -68,11 +73,13 @@ const Order = function ({ order, setOrder, menuData }){
                         
                     </div>
                 </div>
+                
                 {/* order tab */}
                 {currentTab === 'order'? (
                     <>
-                   
+                <img src={civiche} id="civiche_order_page"/> 
                 <div className="order_items_container">
+                    <img/>
                     {Object.keys(groupedMenuData).map(section => (
                         <div key={section} className="order_section" id={section}>
                             <h2>{section}</h2>
