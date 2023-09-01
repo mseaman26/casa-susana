@@ -9,7 +9,7 @@ import menuIcon from '../../assets/images/menu_icon.png'
 import civiche from '../../assets/images/civiche.jpeg'
 
 
-const Order = function ({ order, setOrder, menuData }){
+const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
 
     const [currentTab, setCurrentTab] = useState('order')
 
@@ -69,6 +69,7 @@ const Order = function ({ order, setOrder, menuData }){
                             <div id="cart_quantity">{getOrderQuantity()}</div>
                             ) : <></>}
                         </div>
+                        <div id="order_close_button" onClick={()=>setOrder1Shown(false)}>CLOSE X</div>
                         
                     </div>
                 </div>

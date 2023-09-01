@@ -14,7 +14,7 @@ const OrderLocations = ({order, setOrder}) => {
         <>
         {/* <Order menuData={menuData1} order={order} setOrder={setOrder} /> */}
         {oder1shown? (
-           <Order menuData={menuData1} order={order} setOrder={setOrder} /> 
+           <Order menuData={menuData1} order={order} setOrder={setOrder} setOrder1Shown={setOrder1Shown}/> 
         ) : <></>}
         <div id="order_locations_page">
             <div id="order_online_page_image_container">
