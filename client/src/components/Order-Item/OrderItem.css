@@ -1,0 +1,23 @@
+.OrderItem_container{
+    border-top: 1px solid gray;
+    border-bottom:1px solid gray;
+    margin-top: -1px;
+}
+.OrderItem_container:hover{
+    background-color: rgb(234, 234, 234);
+    cursor: pointer;
+}
+.item_name_and_price{
+    display: flex;
+    justify-content: space-between;
+}
+.item_name_and_price span{
+    color: #4C4C4C;
+    font-size: 14px;
+    font-weight: 700;
+}
+.single_item_container p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #666;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import './OrderItem.css'
 
 const OrderItem = function({ menuItem, order, setOrder}){
 
@@ -17,12 +18,14 @@ const OrderItem = function({ menuItem, order, setOrder}){
     }
 
     return(
-        <>
-        <h3>{menuItem.name}: ${menuItem.price}</h3>
-        <p>{`${menuItem.description}`}</p>
-        <button onClick={addItem}>Add to cart</button>
-        <p>In your cart: {order[menuItem.name]? order[menuItem.name]: 0}</p>
-        </>
+        <div className="OrderItem_container" onClick={addItem}>
+            <div className="single_item_container">
+                <div className="item_name_and_price"><span>{menuItem.name}</span> <span>${menuItem.price}</span></div>
+                <p>{`${menuItem.description}`}</p>
+                {/* <button onClick={addItem}>Add to cart</button>
+                <p>In your cart: {order[menuItem.name]? order[menuItem.name]: 0}</p> */}
+            </div>
+        </div>
     )
 }
 

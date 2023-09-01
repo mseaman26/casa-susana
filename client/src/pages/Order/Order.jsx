@@ -82,9 +82,11 @@ const Order = function ({ order, setOrder, menuData }){
                     {Object.keys(groupedMenuData).map(section => (
                         <div key={section} className="order_section" id={section}>
                             <h2>{section}</h2>
+                            <div className="menu_items_in_section">
                             {groupedMenuData[section].map((menuItem, index) => (
-                                <OrderItem menuItem={menuItem} key={index} order={order} setOrder={setOrder}/>
+                                    <OrderItem menuItem={menuItem} key={index} order={order} setOrder={setOrder}/>
                             ))}
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -103,8 +103,39 @@
     right: 27px
 }
 .order_items_container{
-    padding-top: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 250px;
+    padding-inline: 20px;
 }
 .order_section{
-    border-bottom: solid black 2px;
+
+}
+.order_section h2{
+    padding-block: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #4c4c4c;
+    text-transform: uppercase;
+}
+.menu_items_in_section {
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    grid-row-gap: 0; /* This sets the vertical gap to 0 */
+    grid-column-gap: 20px; 
+    padding-bottom: 40px;
+
+}
+
+@media screen and (max-width: 992px) {
+    #order_container{
+        width: 100%;
+    }
+    .order_header{
+        width: 100%;
+    }
 }
