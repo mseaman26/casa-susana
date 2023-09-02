@@ -47,9 +47,11 @@ const Menu = function({menuData}){
                 {Object.keys(groupedMenuData).map(section => (
                     <div key={section} className="menu_section" id={section}>
                         <h2 className="menu_section_header">{section}</h2>
+                        <div className="menu_items_section_menuPage">
                         {groupedMenuData[section].map((menuItem, index) => (
                             <MenuItem menuItem={menuItem} key={index} />
                         ))}
+                        </div>
                     </div>
                 ))}
             </div>
