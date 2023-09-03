@@ -41,5 +41,10 @@
     height: 100vh;
     background: rgba(255, 255, 255, 0.4); 
     z-index: 7000;
-  
+}
+.add_to_cart_button{
+    background-color: orange;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 3px;
 }
