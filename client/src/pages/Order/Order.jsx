@@ -80,12 +80,12 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
                 <img src={civiche} id="civiche_order_page"/> 
                 <div className="order_items_container">
                     <img/>
-                    {Object.keys(groupedMenuData).map(section => (
-                        <div key={section} className="order_section" id={section}>
+                    {Object.keys(groupedMenuData).map((section, index) => (
+                        <div key={index} className="order_section" id={section}>
                             <h2>{section}</h2>
                             <div className="menu_items_in_section">
                             {groupedMenuData[section].map((menuItem, index) => (
-                                    <OrderItem menuItem={menuItem} key={index} order={order} setOrder={setOrder}/>
+                                    <OrderItem menuItem={menuItem} index={index} order={order} setOrder={setOrder}/>
                             ))}
                             </div>
                         </div>

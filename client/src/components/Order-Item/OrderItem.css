@@ -21,3 +21,19 @@
     font-size: 12px;
     color: #666;
 }
+.item_form{
+    background-color: green;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.item_form_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 7000;
+  
+}

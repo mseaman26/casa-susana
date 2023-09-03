@@ -12,7 +12,7 @@ import OrderLocations from './pages/OrderLocations/OrderLocations';
 import menuData1 from '../src/assets/menu1.json'
 //import { AppProvider } from './context/appContext';
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
