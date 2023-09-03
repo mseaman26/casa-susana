@@ -123,7 +123,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 250px;
-    padding-inline: 20px;
+    padding-inline: 10px;
+    position: relative;
 }
 .order_section{
 
