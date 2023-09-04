@@ -14,11 +14,13 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
     const [currentTab, setCurrentTab] = useState('order')
 
     const getOrderQuantity = () => {
-        let quantity = 0
-        for(let item in order){
-            quantity += order[item]
-        }
-        return quantity
+        return Object.keys(order).length
+        // return order.keys.length
+        // let quantity = 0
+        // for(let item in order){
+        //     quantity += order[item]
+        // }
+        // return quantity
     }
     const getSubtotal = () => {
         let subtotal = 0.00
