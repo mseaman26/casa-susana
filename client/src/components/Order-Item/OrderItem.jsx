@@ -22,6 +22,13 @@ const OrderItem = function({ menuItem, order, setOrder, index}){
             }))
         }
     }
+    function submitItem() {
+        let prevQuantity = order[menuItem.name] || 0
+        setOrder((prevState) => ({
+            ...prevState,
+            [menuItem.name]: itemQuantity+prevQuantity
+        }))
+    }
     function handleItemQuantityChange(event) {
         // Get the value from the input
         const newValue = event.target.value;
@@ -84,7 +91,7 @@ const OrderItem = function({ menuItem, order, setOrder, index}){
                     <input type="number" defaultValue={itemQuantity} min={1} onChange={handleItemQuantityChange} pattern="^[1-9]\d*$"></input>
                     <div className="add_to_cart_button">
                         <span>${itemTotal}</span>
-                        <span>Add To Cart</span>
+                        <button onClick={submitItem}>Add To Cart</button>
                     </div>
                 </div>
             </div>

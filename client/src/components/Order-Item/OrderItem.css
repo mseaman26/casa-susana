@@ -31,7 +31,7 @@
     left: 240px;
     width: 300px;
     height: 300px;
-
+    cursor: auto;
 }
 .item_form_overlay{
     position: fixed;
@@ -47,4 +47,7 @@
     width: fit-content;
     padding: 5px;
     border-radius: 3px;
+}
+.add_to_cart_button button{
+    cursor: pointer;
 }
