@@ -63,7 +63,6 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
     return(
         <>
             <h1>Your Order</h1>
-            <Link to='/order'>Continue Ordering</Link>
             {orderArray.map((orderItem, index) => {
                 let prices = getPrices(orderItem.name, orderItem.quantity )
                 return(

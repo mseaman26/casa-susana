@@ -113,7 +113,7 @@ function Header() {
                       <div className='nav_item_right'>OUR STORY</div>
                     </NavLink>
                     <div id='order_online_link_container'>
-                        <Link to="/orderlocations">
+                        <Link to="/orderlocations" id='order_online_link'>
                             <img src={orderOnlineImage} id='order_online_image'/>
                         </Link>
                     </div>

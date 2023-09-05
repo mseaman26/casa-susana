@@ -4,8 +4,6 @@ import './OrderItem.css'
 const OrderItem = function({ menuItem, order, setOrder, index, scrollToMenuItem}){
 
     const [itemFormShown, setItemFormShown] = useState(false)
-    const [itemFormPosition, setItemFormPosition] = useState({top: 0, left: 0})
-    const [itemFormXPosition, setItemFormXPosition] = useState(0)
     const [itemQuantity, setItemQuantity] = useState(1)
     const [itemTotal, setItemTotal] = useState(0)
     const [itemFormTranslateX, setItemFormTranslateX] = useState(``)
@@ -37,26 +35,8 @@ const OrderItem = function({ menuItem, order, setOrder, index, scrollToMenuItem}
     }
     function showItemForm(event){
         setItemFormShown(true)
-        const menuItemContainer = menuItemRef.current
-        const rect = menuItemContainer.getBoundingClientRect()
         
-        const menuItemHeight  = menuItemContainer.clientHeight
-        const menuItemWidth = menuItemContainer.clientWidth
-        setItemFormTranslateY(`translateY(${(menuItemHeight*-.5)-150}px)`)
-        
-        if(index%2===0){
-            setItemFormTranslateX(`translateX(${menuItemWidth+20}px)`)
-            console.log('menuItemHeight', menuItemHeight)
-        }else{
-            setItemFormTranslateX(`translateX(-320px)`)
-            console.log('odd')
-        }
-        console.log(rect.top + window.scrollY + (menuItemHeight/2))
-        setItemFormPosition({
-            top: 0,
-            left: 0
-        })
-        // itemFormRef.current.scrollIntoView({behavior: 'smooth', block: 'center'})
+       
     }
     function closeItemForm(event){
         event.stopPropagation()
@@ -68,11 +48,32 @@ const OrderItem = function({ menuItem, order, setOrder, index, scrollToMenuItem}
    
     useEffect(() => {
         if (itemFormShown && menuItemRef.current) {
-          menuItemRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            menuItemRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const menuItemContainer = menuItemRef.current
+            const itemFormContainer = itemFormRef.current
+            // const menuRect = menuItemContainer.getBoundingClientRect()
+            
+            
+            // console.log(itemFormHeight)
+
+            const menuItemHeight  = menuItemContainer.clientHeight
+            const menuItemWidth = menuItemContainer.clientWidth
+            const itemFormHeight = itemFormContainer.clientHeight
+            
+            setItemFormTranslateY(`translateY(${(menuItemHeight*-.5)-(itemFormHeight/2)}px)`)
+            
+            if(index%2===0){
+                setItemFormTranslateX(`translateX(${menuItemWidth+20}px)`)
+                console.log('menuItemHeight', menuItemHeight)
+            }else{
+                setItemFormTranslateX(`translateX(-320px)`)
+                console.log('odd')
+            }
+
         }
       }, [itemFormShown]);
     return(
-        <div className="OrderItem_container" onClick={showItemForm} index={index} ref={menuItemRef}>
+        <div className="OrderItem_container" onClick={() => setItemFormShown(true)} index={index} ref={menuItemRef}>
             <div className="single_item_container" >
                 <div className="item_name_and_price" ><span>{menuItem.name}</span> <span className="order_item_price">${menuItem.price}</span></div>
                 <p>{`${menuItem.description}`}</p>
@@ -94,7 +95,6 @@ const OrderItem = function({ menuItem, order, setOrder, index, scrollToMenuItem}
             </>
             ) : <></>}
         </div>
-       
     )
 }
 

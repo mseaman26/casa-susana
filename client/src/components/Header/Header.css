@@ -15,7 +15,6 @@
     }
 
     #nav_right {
-        
         width: 50%;
         display: flex;
         align-items: center;
@@ -53,14 +52,17 @@
     #order_online_link_container{
         display: flex;
         align-items: center;
-        height: 39px;
+        height:69px;
+    }
+    #order_online_link{
+        display: flex;
+        align-items: center;
     }
     #order_online_image{
         margin-bottom: 7px;
         margin-inline: 15px;
         width: 160px;
         background-color: var(--header_color);
-    
         transform: translateY(3px);
     }
     .nav_link.active {
