@@ -12,7 +12,7 @@ body{
   margin: 0px;
   padding: 0px;
 }
-.no-scroll {
+.no_scroll {
   overflow: hidden;
   pointer-events: none; /* Disable pointer events on the body */
 }

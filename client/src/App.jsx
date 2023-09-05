@@ -27,7 +27,6 @@ function App() {
   return (
     <Router>
         <Header/>
-    
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           {/* <Route path='/menu' element={<Menu/>}></Route> */}

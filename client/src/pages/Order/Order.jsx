@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import './Order.css'
 import OrderItem from "../../components/Order-Item/OrderItem";
 import ReviewOrder from '../../pages/ReviewOrder/ReviewOrder'
@@ -12,15 +12,16 @@ import civiche from '../../assets/images/civiche.jpeg'
 const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
 
     const [currentTab, setCurrentTab] = useState('order')
+    const menuItemRef = useRef(null)
+  
+    const scrollToMenuItem = (index) => {
+        const menuItems = menuItemRef.current
+        const menuItemNodes = menuItems.querySelectorAll('div')[index]
+        menuItemNodes.scrollTo({behavior: 'smooth'})
+    }
 
     const getOrderQuantity = () => {
         return Object.keys(order).length
-        // return order.keys.length
-        // let quantity = 0
-        // for(let item in order){
-        //     quantity += order[item]
-        // }
-        // return quantity
     }
     const getSubtotal = () => {
         let subtotal = 0.00
@@ -85,9 +86,9 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
                     {Object.keys(groupedMenuData).map((section, index) => (
                         <div key={index} className="order_section" id={section}>
                             <h2>{section}</h2>
-                            <div className="menu_items_in_section">
+                            <div className="menu_items_in_section" ref={menuItemRef}>
                             {groupedMenuData[section].map((menuItem, index) => (
-                                    <OrderItem menuItem={menuItem} index={index} order={order} setOrder={setOrder}/>
+                                    <OrderItem menuItem={menuItem} index={index} key={index} order={order} setOrder={setOrder} scrollToMenuItem={scrollToMenuItem}/>
                             ))}
                             </div>
                         </div>
