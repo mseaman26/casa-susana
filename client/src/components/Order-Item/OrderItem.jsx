@@ -16,7 +16,7 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
         let prevQuantity = order[menuItem.name] || 0
         setOrder((prevState) => ({
             ...prevState,
-            [menuItem.name]: itemQuantity+prevQuantity
+            [menuItem.name]: parseInt(itemQuantity)+parseInt(prevQuantity)
         }))
         closeItemForm()
     }

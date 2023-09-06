@@ -83,7 +83,7 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
                             ) : <></>}
                             </div>
                             <div id="order_close_button" onClick={()=>setOrder1Shown(false)}>CLOSE X</div>
-                        </>
+                            </>
                         )}
                         
                         
