@@ -12,6 +12,9 @@ import civiche from '../../assets/images/civiche.jpeg'
 const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
 
     const [currentTab, setCurrentTab] = useState('order')
+    const [orderHeaderText, setOrderHeaderText] = useState('PLACE ORDER ONLINE')
+    const [orderHeaderButtonShown, setOrderHeaderButtonShown] = useState(false)
+    const [itemFormShown, setItemFormShown] = useState(false)
     const menuItemRef = useRef(null)
   
     const scrollToMenuItem = (index) => {
@@ -61,18 +64,28 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
         <div id="overlay_container">
             <div id="order_container">
                 <div className="order_header">
-                    <h1 id='online_order_heading'>Place Order Online </h1>
+                    {orderHeaderButtonShown ? (
+                        <button></button>
+                    ) : <></>}
+                    <span id='online_order_heading'>{orderHeaderText}</span>
                     <div id='cart_info'>
-                        <div id="menu_icon_container" className={`${currentTab === 'order'? 'order_nav_active' : "order_nav_item "}`} onClick={()=>setCurrentTab('order')}>
-                            <img src={menuIcon} id="menu_icon"/>
-                        </div>
-                        <div id="cart_icon_container" className={`order_nav_item ${currentTab === 'review'? 'order_nav_active' : ""}`} onClick={()=>setCurrentTab('review')}>
-                            <img id="shopping_cart" src={shoppingCartImage} />
-                            {getOrderQuantity() > 0 ? (
-                            <div id="cart_quantity">{getOrderQuantity()}</div>
+                        {orderHeaderButtonShown ? (
+                            <></>
+                        ) : (
+                            <>
+                            <div id="menu_icon_container" className={`${currentTab === 'order'? 'order_nav_active' : "order_nav_item "}`} onClick={()=>setCurrentTab('order')}>
+                                <img src={menuIcon} id="menu_icon"/>
+                            </div>
+                            <div id="cart_icon_container" className={`order_nav_item ${currentTab === 'review'? 'order_nav_active' : ""}`} onClick={()=>setCurrentTab('review')}>
+                                <img id="shopping_cart" src={shoppingCartImage} />
+                                {getOrderQuantity() > 0 ? (
+                                <div id="cart_quantity">{getOrderQuantity()}</div>
                             ) : <></>}
-                        </div>
-                        <div id="order_close_button" onClick={()=>setOrder1Shown(false)}>CLOSE X</div>
+                            </div>
+                            <div id="order_close_button" onClick={()=>setOrder1Shown(false)}>CLOSE X</div>
+                        </>
+                        )}
+                        
                         
                     </div>
                 </div>
@@ -88,7 +101,7 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
                             <h2>{section}</h2>
                             <div className="menu_items_in_section" ref={menuItemRef}>
                             {groupedMenuData[section].map((menuItem, index) => (
-                                    <OrderItem menuItem={menuItem} index={index} key={index} order={order} setOrder={setOrder} scrollToMenuItem={scrollToMenuItem}/>
+                                    <OrderItem menuItem={menuItem} index={index} key={index} order={order} setOrder={setOrder} scrollToMenuItem={scrollToMenuItem} setOrderHeaderText={setOrderHeaderText} setOrderHeaderButtonShown={setOrderHeaderButtonShown} />
                             ))}
                             </div>
                         </div>

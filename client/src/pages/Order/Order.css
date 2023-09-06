@@ -50,6 +50,10 @@
     z-index: 2;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+.order_header button{
+    visibility: hidden;
+    width: 71px;
+}
 #cart_info{
     height: 100%;
     display: flex;
@@ -164,5 +168,9 @@
     .menu_items_in_section{
         display: block;
     }
-   
+}
+@media screen and (max-width: 576px) {
+    #online_order_heading{
+        font-size: 15px;
+    }
 }
