@@ -26,14 +26,7 @@
     font-size: 12px;
     color: #666;
 }
-.item_form{
-    background-color: #f1f0f0;
-    position: absolute;
-    width: 300px;
-    height: fit-content;
-    cursor: auto;
-    z-index: 8000;
-}
+
 .item_form_overlay{
     position: fixed;
     top: 0;
@@ -44,6 +37,71 @@
     z-index: 7000;
     overflow-y: auto;
 }
+.item_form_large_screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    position: absolute;
+    width: 300px;
+    height: fit-content;
+    cursor: auto;
+    z-index: 8000;
+    border: 1px solid rgb(205, 205, 205);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.item_form_body_large_screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.item_form_body_large_screen p{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.item_form_body_large_screen .item_description{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+    font-size: 14px;
+}
+.item_form_body_large_screen .special_instructions{
+    color: #434343;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.item_form_body_large_screen .input_container{
+    position: relative;
+    width: 100%;
+}
+.input_container div{
+    position: absolute;
+    height: 40px;
+    right: -4px;
+    top: 4px
+}
+.input_container button{
+    height: 38px;
+    width: 38px;
+   
+}
+.item_form_body_large_screen textarea,  input{
+    width: 100%;
+}
+.item_form_body_large_screen input{
+    height: 40px;
+    font-size: 18px;
+    color: #666;
+}
+/* Style the number input */
+
+
+.add_to_cart_div_large_screen{
+    width: 100%;
+    background-color: white;
+}
+/* ITEM FORM SMALL SCREEN */
+
 .item_form_small_screen{
     position: fixed;
     top: 0; 
@@ -74,12 +132,31 @@
 .item_form_body p{
     margin: 0;
 }
-.add_to_cart_button{
-    background-color: orange;
+.add_to_cart_div_large_screen{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+.add_to_cart_orange{
+    display: flex;
+    background-color: #F08B18;
     width: fit-content;
     padding: 5px;
     border-radius: 3px;
+    width: 90%;
+    color: white;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 15px;
+}
+.add_to_cart_orange .add_to_cart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .add_to_cart_button button{
     cursor: pointer;
+    border: none;
 }

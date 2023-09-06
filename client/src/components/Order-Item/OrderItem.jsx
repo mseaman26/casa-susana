@@ -11,6 +11,19 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const itemFormRef = useRef(null)
     const menuItemRef = useRef(null)
+    const quantityRef = useRef(null)
+
+    function incrementQuantity(){
+        quantityRef.current.value = parseInt(itemQuantity+1)
+        setItemQuantity((prev)=>prev+1)
+    }
+    function decrementtQuantity(){
+        if(quantityRef.current.value > 0){
+            quantityRef.current.value = parseInt(itemQuantity-1)
+            setItemQuantity((prev)=>prev-1)
+        }
+        
+    }
 
     function submitItem() {
         let prevQuantity = order[menuItem.name] || 0
@@ -23,9 +36,9 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
     function handleItemQuantityChange(event) {
 
         const newValue = event.target.value;
+
         if(parseInt(newValue) < 1){
             console.log(parseInt(newValue))
-            console.log('lessthanone')
             setItemQuantity(0)
             setItemTotal(0*menuItem.price)
         }else{
@@ -35,7 +48,10 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
         
     }
     function closeItemForm(event){
+        event.stopPropagation()
+        console.log('close item form')
         setItemFormShown(false)
+        console.log(itemFormShown)
         setOrderHeaderButtonShown(false)
         setOrderHeaderText('PLACE ORDER ONLINE')
     }
@@ -44,6 +60,7 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
     }
    
     useEffect(() => {
+
         if (itemFormShown && menuItemRef.current) {
             if(screenWidth < 769){
                 setOrderHeaderButtonShown(true)
@@ -83,6 +100,19 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
           window.removeEventListener('resize', handleResize);
         };
       }, []);
+
+      useEffect(() => {
+        if(screenWidth < 769 && itemFormShown){
+            setOrderHeaderButtonShown(true)
+            setOrderHeaderText(menuItem.name)
+        }
+       
+      }, [screenWidth])
+
+      useEffect(() => {
+        setItemTotal(itemQuantity*menuItem.price)
+      }, [itemQuantity])
+
     return(
         <div className="OrderItem_container" onClick={() => setItemFormShown(true)} index={index} ref={menuItemRef}>
             <div className="single_item_container" >
@@ -94,7 +124,7 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
             <>
                 {screenWidth<769 ? (
                     <>
-                 
+                    {/* SMALL SCREEN ITEM FORM */}
                     <div className={`item_form_small_screen`} onClick={handleItemFormClick} ref={itemFormRef}> 
                         <div className="item_form_nav">
                             <button onClick={closeItemForm}>&lt;</button>
@@ -116,15 +146,28 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
                     ) :   
                     <>
                     <div className="item_form_overlay" onClick={closeItemForm}></div>
-                    <div className={`item_form`} style = {{transform: `${itemFormTranslateX} ${itemFormTranslateY}`}} onClick={handleItemFormClick} ref={itemFormRef}> 
-                        <p>{menuItem.description}</p> 
-                        <p>Special Instructions</p>
-                        <textarea type="text" rows='2'></textarea><br/>
-                        <p>Quantity</p>
-                        <input type="number" defaultValue={itemQuantity} min={1} onChange={handleItemQuantityChange} pattern="^[1-9]\d*$"></input>
-                        <div className="add_to_cart_button">
-                            <span>${itemTotal}</span>
-                            <button onClick={submitItem}>Add To Cart</button>
+                    {/* LARGE SCREEN ITEM FORM */}
+                    <div className={`item_form_large_screen`} style = {{transform: `${itemFormTranslateX} ${itemFormTranslateY}`}} onClick={handleItemFormClick} ref={itemFormRef}> 
+                        <div className="item_form_body_large_screen">
+                            <p className="item_description">{menuItem.description}</p> 
+                            <p className="special_instructions">Special Instructions</p>
+                            <textarea type="text" rows='2'></textarea><br/>
+                            <p className="special_instructions">Quantity</p>
+                            <div className="input_container">
+                                <input type="number" ref={quantityRef}defaultValue={itemQuantity} min={1} onChange={handleItemQuantityChange} pattern="^[1-9]\d*$"></input>
+                                <div>
+                                <button onClick={decrementtQuantity}>-</button>
+                                <button onClick={incrementQuantity}>+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="add_to_cart_div_large_screen" onClick={submitItem}>
+                            <div className="add_to_cart_orange">
+                                <span>${itemTotal}</span>
+                                <div className="add_to_cart">
+                                    Add To Cart
+                                </div>
+                            </div>
                         </div>
                     </div>
                     </>
