@@ -15,12 +15,12 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
 
     function incrementQuantity(){
         quantityRef.current.value = parseInt(itemQuantity+1)
-        setItemQuantity((prev)=>prev+1)
+        setItemQuantity((prev)=>(parseInt(prev)+1).toFixed(2))
     }
     function decrementtQuantity(){
         if(quantityRef.current.value > 0){
             quantityRef.current.value = parseInt(itemQuantity-1)
-            setItemQuantity((prev)=>prev-1)
+            setItemQuantity((prev)=>(prev-1))
         }
         
     }
@@ -39,7 +39,7 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
 
         if(parseInt(newValue) < 1){
             console.log(parseInt(newValue))
-            setItemQuantity(0)
+            setItemQuantity(0).toFixed(2)
             setItemTotal(0*menuItem.price)
         }else{
             setItemQuantity(newValue)
