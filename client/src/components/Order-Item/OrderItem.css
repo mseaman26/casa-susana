@@ -106,6 +106,7 @@
 .add_to_cart_div_large_screen{
     width: 100%;
     background-color: white;
+    cursor: pointer;
 }
 /* ITEM FORM SMALL SCREEN */
 

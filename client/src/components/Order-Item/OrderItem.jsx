@@ -25,13 +25,15 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
         
     }
 
-    function submitItem() {
+    function submitItem(e) {
+
         let prevQuantity = order[menuItem.name] || 0
         setOrder((prevState) => ({
             ...prevState,
             [menuItem.name]: parseInt(itemQuantity)+parseInt(prevQuantity)
         }))
-        closeItemForm()
+        console.log('close form')
+        setItemFormShown(false)
     }
     function handleItemQuantityChange(event) {
 
@@ -134,13 +136,13 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
                         <div className="item_form_nav">
                             <button onClick={closeItemForm}>&lt;</button>
                         </div>
-                        <div className="item_form_body">
+                        <div className="item_form_body_small_screen">
                             <p>{menuItem.description}</p> 
                             <p>Special Instructions</p>
                             <textarea type="text" rows='2'></textarea><br/>
                             <p>Quantity</p>
                             <input type="number" defaultValue={itemQuantity} min={1} onChange={handleItemQuantityChange} pattern="^[1-9]\d*$"></input>
-                            <div className="add_to_cart_button">
+                            <div className="add_to_cart_button_small_screen">
                                 <span>${itemTotal}</span>
                             <button onClick={submitItem}>Add To Cart</button>
                         </div>
