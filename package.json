@@ -5,9 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-all":"npm install && npm install --prefix client",
-    "build": "cd client && npm run build"
+    "install-all": "npm install && npm install --prefix client",
+    "build": "cd client && npm run build",
+    "dev": "cd client && npm run dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d client/distgit "
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  },
+  "homepage": "https://mseaman26.github.io/mex-restaurant"
+
 }

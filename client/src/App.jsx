@@ -25,7 +25,7 @@ function App() {
 }, [order])
 
   return (
-    <Router>
+    <Router basename='/'>
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}></Route>

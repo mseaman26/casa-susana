@@ -41,9 +41,9 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
             ...prevState,
             [menuItem.name]: parseInt(itemQuantity)+parseInt(prevQuantity)
         }))
-        console.log('close form')
         setOrderHeaderButtonShown(false)
         setItemFormShown(false)
+        setOrderHeaderText('PLACE ORDER ONLINE')
     }
     function handleItemQuantityChange(event) {
 
