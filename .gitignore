@@ -6,3 +6,6 @@ package-lock.json
 build
 issues.txt
 .vercel
+
+# Local Netlify folder
+.netlify

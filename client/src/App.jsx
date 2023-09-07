@@ -10,6 +10,7 @@ import Checkout from './pages/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
 import OrderLocations from './pages/OrderLocations/OrderLocations';
 import menuData1 from '../src/assets/menu1.json'
+import Test from './components/Test';
 //import { AppProvider } from './context/appContext';
 import './App.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,7 +30,8 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          {/* <Route path='/menu' element={<Menu/>}></Route> */}
+          {/* <Route path='/mex-restaurant' element={<Test/>}></Route> */}
+          <Route path='/menu' element={<Menu/>}></Route>
           <Route path='/menu/location1' element={<Menu menuData={menuData1}/>}></Route>
           <Route path='/orderlocations' element={<OrderLocations order={order} setOrder={setOrder}/>}></Route>
           <Route path='/orderlocations/location1' element={<Order order={order} setOrder={setOrder} menuData={menuData1}/>}></Route>
