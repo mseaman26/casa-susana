@@ -1,3 +1,4 @@
+// import { Outlet } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
@@ -27,10 +28,12 @@ function App() {
 
   return (
     <Router basename='/'>
+        {/* <> */}
         <Header/>
+          {/* <Outlet/> */}
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          {/* <Route path='/mex-restaurant' element={<Test/>}></Route> */}
+          <Route path='/mex-restaurant' element={<Test/>}></Route>
           <Route path='/menu' element={<Menu/>}></Route>
           <Route path='/menu/location1' element={<Menu menuData={menuData1}/>}></Route>
           <Route path='/orderlocations' element={<OrderLocations order={order} setOrder={setOrder}/>}></Route>
@@ -40,7 +43,8 @@ function App() {
           <Route path='/order/checkout' element={<Checkout/>}></Route>
         </Routes>
         <Footer/>
-    </Router>
+        {/* </> */}
+      </Router>
   )
 }
 
