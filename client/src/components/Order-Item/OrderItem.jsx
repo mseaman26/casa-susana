@@ -13,17 +13,26 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
     const menuItemRef = useRef(null)
     const quantityRef = useRef(null)
 
-    function incrementQuantity(){
-        quantityRef.current.value = parseInt(itemQuantity+1)
-        setItemQuantity((prev)=>(parseInt(prev)+1).toFixed(2))
+    function incrementQuantity() {
+        // Use the functional form of setState
+        setItemQuantity((prevItemQuantity) => {
+            const newValue = parseInt(prevItemQuantity) + 1;
+            quantityRef.current.value = newValue;
+            return newValue.toFixed(2);
+        });
     }
-    function decrementtQuantity(){
-        if(quantityRef.current.value > 0){
-            quantityRef.current.value = parseInt(itemQuantity-1)
-            setItemQuantity((prev)=>(prev-1))
+    
+    function decrementtQuantity() {
+        if (itemQuantity > 1) {
+            // Use the functional form of setState
+            setItemQuantity((prevItemQuantity) => {
+                const newValue = parseInt(prevItemQuantity) - 1;
+                quantityRef.current.value = newValue;
+                return newValue.toFixed(2);
+            });
         }
-        
     }
+    
 
     function submitItem(e) {
 
@@ -33,6 +42,7 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
             [menuItem.name]: parseInt(itemQuantity)+parseInt(prevQuantity)
         }))
         console.log('close form')
+        setOrderHeaderButtonShown(false)
         setItemFormShown(false)
     }
     function handleItemQuantityChange(event) {
@@ -116,9 +126,6 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
         setItemTotal((parseInt(itemQuantity)*(menuItem.price)).toFixed(2))
       }, [itemQuantity])
 
-      useEffect(() => {
-        console.log(itemTotal)
-      },[itemTotal])
 
     return(
         <div className="OrderItem_container" onClick={() => setItemFormShown(true)} index={index} ref={menuItemRef}>
@@ -129,33 +136,13 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
 
             {itemFormShown? (
             <>
-                {screenWidth<769 ? (
-                    <>
-                    {/* SMALL SCREEN ITEM FORM */}
-                    <div className={`item_form_small_screen`} onClick={handleItemFormClick} ref={itemFormRef}> 
-                        <div className="item_form_nav">
-                            <button onClick={closeItemForm}>&lt;</button>
-                        </div>
-                        <div className="item_form_body_small_screen">
-                            <p>{menuItem.description}</p> 
-                            <p>Special Instructions</p>
-                            <textarea type="text" rows='2'></textarea><br/>
-                            <p>Quantity</p>
-                            <input type="number" defaultValue={itemQuantity} min={1} onChange={handleItemQuantityChange} pattern="^[1-9]\d*$"></input>
-                            <div className="add_to_cart_button_small_screen">
-                                <span>${itemTotal}</span>
-                            <button onClick={submitItem}>Add To Cart</button>
-                        </div>
-                        </div>
-                        
-                    </div>
-                    </>
-                    ) :   
+                  
                     <>
                     <div className="item_form_overlay" onClick={closeItemForm}></div>
                     {/* LARGE SCREEN ITEM FORM */}
-                    <div className={`item_form_large_screen`} style = {{transform: `${itemFormTranslateX} ${itemFormTranslateY}`}} onClick={handleItemFormClick} ref={itemFormRef}> 
+                    <div className={`item_form_large_screen`} style = {{transform: screenWidth >= 769? `${itemFormTranslateX} ${itemFormTranslateY}` : ''}} onClick={handleItemFormClick} ref={itemFormRef}> 
                         <div className="item_form_body_large_screen">
+                            <button className="item_form_nav_button" onClick={closeItemForm}>&lt;</button>
                             <p className="item_description">{menuItem.description}</p> 
                             <p className="special_instructions">Special Instructions</p>
                             <textarea type="text" rows='2'></textarea><br/>
@@ -178,7 +165,7 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
                         </div>
                     </div>
                     </>
-                    }
+
                     
             </>
             ) : <></>}
