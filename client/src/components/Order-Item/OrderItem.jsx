@@ -40,10 +40,10 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
         if(parseInt(newValue) < 1){
             console.log(parseInt(newValue))
             setItemQuantity(0).toFixed(2)
-            setItemTotal(0*menuItem.price)
+            setItemTotal(0*menuItem.price).toFixed(2)
         }else{
             setItemQuantity(newValue)
-            setItemTotal(newValue*menuItem.price)
+            setItemTotal(newValue*menuItem.price).toFixed(2)
         }
         
     }
@@ -110,8 +110,13 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
       }, [screenWidth])
 
       useEffect(() => {
-        setItemTotal(itemQuantity*menuItem.price)
+        console.log(parseInt(itemQuantity), menuItem.price)
+        setItemTotal((parseInt(itemQuantity)*(menuItem.price)).toFixed(2))
       }, [itemQuantity])
+
+      useEffect(() => {
+        console.log(itemTotal)
+      },[itemTotal])
 
     return(
         <div className="OrderItem_container" onClick={() => setItemFormShown(true)} index={index} ref={menuItemRef}>
