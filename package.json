@@ -9,7 +9,7 @@
     "build": "cd client && npm run build",
     "dev": "cd client && npm run dev",
     "predeploy": "cd client && npm install && npm run build",
-    "deploy": "gh-pages -d client/dist"
+    "deploy": "vite build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://mseaman26.github.io/mex-restaurant/",
   "dependencies": {
-    "@vitejs/plugin-react": "^4.0.4"
+    "@vitejs/plugin-react": "^4.0.4",
+    "react-dom": "^18.2.0"
   }
 }

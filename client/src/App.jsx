@@ -1,4 +1,3 @@
-// import { Outlet } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
@@ -12,7 +11,6 @@ import Footer from './components/Footer/Footer';
 import OrderLocations from './pages/OrderLocations/OrderLocations';
 import menuData1 from '../src/assets/menu1.json'
 import Test from './components/Test';
-//import { AppProvider } from './context/appContext';
 import './App.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,7 +25,7 @@ function App() {
 }, [order])
 
   return (
-    <Router basename='/'>
+    <Router basename='/https://mseaman26.github.io/mex-restaurant/'>
         {/* <> */}
         <Header/>
           {/* <Outlet/> */}
