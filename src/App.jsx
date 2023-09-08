@@ -10,7 +10,6 @@ import Checkout from './pages/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
 import OrderLocations from './pages/OrderLocations/OrderLocations';
 import menuData1 from '../src/assets/menu1.json'
-import Test from './components/Test';
 import './App.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,13 +24,12 @@ function App() {
 }, [order])
 
   return (
-    <Router basename='/https://mseaman26.github.io/mex-restaurant/'>
+    <Router basename='/'>
         {/* <> */}
         <Header/>
           {/* <Outlet/> */}
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/mex-restaurant' element={<Test/>}></Route>
           <Route path='/menu' element={<Menu/>}></Route>
           <Route path='/menu/location1' element={<Menu menuData={menuData1}/>}></Route>
           <Route path='/orderlocations' element={<OrderLocations order={order} setOrder={setOrder}/>}></Route>
