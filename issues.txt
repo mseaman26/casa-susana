@@ -1,0 +1,10 @@
+Extra Small (xs): Less than 576px
+Small (sm): 576px to 767px
+Medium (md): 768px to 991px
+Large (lg): 992px to 1199px
+Extra Large (xl): 1200px and above
+
+-couldn't get hamburger menu to come from left
+-couldn't get smooth transition on darkening background when burger menu opens
+-labels for join the club inputs and eliminate focus border
+-gap between header and main body when over-scrolling up.  would rather the header came down a little
