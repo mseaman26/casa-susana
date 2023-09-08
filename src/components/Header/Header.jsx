@@ -85,13 +85,13 @@ function Header() {
                       </div>
                     </a>
                     
-                    <a className="menu-item" href="/orderlocations" onClick={closeMenu}>
+                    <a className="menu-item" href="/#/orderlocations" onClick={closeMenu}>
                       ORDER ONLINE
                     </a>
-                    <a className="menu-item" href="/ourstory" onClick={closeMenu}>
+                    <a className="menu-item" href="/#/ourstory" onClick={closeMenu}>
                       OUR STORY
                     </a>
-                    <a className="menu-item" href="/locations" onClick={closeMenu}>
+                    <a className="menu-item" href="/#/locations" onClick={closeMenu}>
                       LOCATIONS
                     </a>
                   </Menu>
