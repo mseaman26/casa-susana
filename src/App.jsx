@@ -17,12 +17,17 @@ import './App.css'
 
 function App() {
 
-  const [order, setOrder] = useState(JSON.parse(localStorage.getItem('order'))|| {})
+  const [order, setOrder] = useState(JSON.parse(localStorage.getItem('order1'))|| {})
     console.log(order)
   
+  const [order2, setOrder2] = useState(JSON.parse(localStorage.getItem('order2'))|| {})
   useEffect(() => {
     localStorage.setItem('order', JSON.stringify(order))
 }, [order])
+
+useEffect(() => {
+  localStorage.setItem('order2', JSON.stringify(order2))
+}, [order2])
 
   return (
     <Router basename='/'>
@@ -34,8 +39,8 @@ function App() {
           <Route path='/menu' element={<Menu/>}></Route>
           <Route path='/menu/location1' element={<Menu menuData={menuData1}/>}></Route>
           <Route path='/menu/location2' element={<Menu menuData={menuData2}/>}></Route>
-          <Route path='/orderlocations' element={<OrderLocations order={order} setOrder={setOrder}/>}></Route>
-          <Route path='/orderlocations/location1' element={<Order order={order} setOrder={setOrder} menuData={menuData1}/>}></Route>
+          <Route path='/orderlocations' element={<OrderLocations order={order} order2={order2} setOrder={setOrder} setOrder2={setOrder2} />}></Route>
+          {/* <Route path='/orderlocations/location1' element={<Order order={order} setOrder={setOrder} menuData={menuData1}/>}></Route> */}
           <Route path='/locations' element={<Contact/>}></Route>
           <Route path='/order/review' element={<ReviewOrder order={order} setOrder={setOrder} menuData={menuData1}/>}></Route>
           <Route path='/order/checkout' element={<Checkout/>}></Route>

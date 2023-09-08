@@ -3,18 +3,24 @@ import './OrderLocations.css'
 import civiche from '../../assets/images/civiche.jpeg'
 import { Link } from "react-router-dom";
 import Order from "../Order/Order";
+import Order2 from '../Order/Order2'
 import menuData1 from '../../assets/menu1.json'
+import menuData2 from '../../assets/menu2.json'
 import shoppingCartImage from '../../assets/images/shoppingCart.png'
 
-const OrderLocations = ({order, setOrder}) => {
+const OrderLocations = ({order, setOrder, order2, setOrder2}) => {
 
     const [oder1shown, setOrder1Shown] = useState(false)
+    const [order2Shown, setOrder2Shown] = useState(false)
 
     return(
         <>
         {/* <Order menuData={menuData1} order={order} setOrder={setOrder} /> */}
         {oder1shown? (
            <Order menuData={menuData1} order={order} setOrder={setOrder} setOrder1Shown={setOrder1Shown}/> 
+        ) : <></>}
+        {order2Shown? (
+           <Order2 menuData={menuData2} order2={order2} setOrder2={setOrder2} setOrder2Shown={setOrder2Shown}/> 
         ) : <></>}
         <div id="order_locations_page">
             <div id="order_online_page_image_container">
@@ -34,7 +40,7 @@ const OrderLocations = ({order, setOrder}) => {
                 <div className="order_location_choice">
                     <h1>Location 2</h1>
                     <p>street address<br/>city state<br/>1(555)-555-5555</p>
-                    <Link to='/orderloactions/location2' className="order_location_link">ORDER NOW</Link>
+                    <Link className="order_location_link" onClick={()=>setOrder2Shown(true)}>ORDER NOW</Link>
                 </div>
             </div>
         </div>
