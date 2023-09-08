@@ -7,4 +7,7 @@ Extra Large (xl): 1200px and above
 -couldn't get hamburger menu to come from left
 -couldn't get smooth transition on darkening background when burger menu opens
 -labels for join the club inputs and eliminate focus border
--gap between header and main body when over-scrolling up.  would rather the header came down a little
+-background color on nav in mobile item form should be same as "<" button
+-"+" and "-" buttons within mobil item form look like shit
+-add to cart button can be hidden by address bar at bottom
+

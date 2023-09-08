@@ -1,0 +1,159 @@
+[
+    {
+      "name": "Sopa de Tortilla",
+      "section": "Appetizers",
+      "description": "A hearty tomato-based soup with crispy tortilla strips, avocado, cheese, and a touch of lime.",
+      "price": 6.99
+    },
+    {
+      "name": "Nachos with Salsa Fresca",
+      "section": "Appetizers",
+      "description": "Crispy tortilla chips topped with fresh salsa made from diced tomatoes, onions, cilantro, and lime juice.",
+      "price": 8.49
+    },
+    {
+      "name": "Flautas",
+      "section": "Appetizers",
+      "description": "Crispy rolled flour tortillas filled with seasoned beans and cheese, served with guacamole and sour cream.",
+      "price": 7.99
+    },
+    {
+      "name": "Shrimp Ceviche",
+      "section": "Appetizers",
+      "description": "Chilled shrimp marinated in lime juice, mixed with diced cucumbers, red onions, cilantro, and mango. Served with plantain chips.",
+      "price": 11.49
+    },
+    {
+      "name": "Chorizo Quesadillas",
+      "section": "Appetizers",
+      "description": "Grilled quesadillas stuffed with spicy chorizo and melted cheese, served with chipotle aioli for dipping.",
+      "price": 9.99
+    },
+    {
+      "name": "Tacos de Pescado",
+      "section": "Small Plates",
+      "description": "Battered and fried fish fillets served in soft corn tortillas with cabbage slaw, chipotle mayo, and lime wedges.",
+      "price": 11.49
+    },
+    {
+      "name": "Tamale con Rajas",
+      "section": "Small Plates",
+      "description": "Steamed cornmeal dumpling filled with roasted poblano pepper strips and cheese, topped with salsa verde.",
+      "price": 8.99
+    },
+    {
+      "name": "Tostadas de Tinga",
+      "section": "Small Plates",
+      "description": "Crispy corn tostadas topped with tinga de pollo (shredded chicken in tomato-chipotle sauce), lettuce, and queso fresco.",
+      "price": 9.49
+    },
+    {
+      "name": "Chapulines Tacos",
+      "section": "Small Plates",
+      "description": "Tacos filled with crunchy roasted grasshoppers, guacamole, and pickled red onions. A unique delicacy!",
+      "price": 12.99
+    },
+    {
+      "name": "Vegetarian Burrito Bowl",
+      "section": "Combinations",
+      "description": "A hearty bowl filled with cilantro-lime rice, black beans, grilled vegetables, and topped with avocado and salsa.",
+      "price": 13.99
+    },
+    {
+      "name": "Enchiladas de Mole",
+      "section": "Combinations",
+      "description": "Corn tortillas rolled and filled with tender chicken, then smothered in rich mole sauce and garnished with sesame seeds.",
+      "price": 12.99
+    },
+    {
+      "name": "Taco Sampler",
+      "section": "Combinations",
+      "description": "Sample three different tacos of your choice, served with Mexican street corn and lime wedges.",
+      "price": 12.99
+    },
+    {
+      "name": "Carnitas Platter",
+      "section": "Combinations",
+      "description": "Slow-cooked pork carnitas served with warm tortillas, salsa, guacamole, and a side of refried beans.",
+      "price": 14.99
+    },
+    {
+      "name": "Sopes de Barbacoa",
+      "section": "Main Courses",
+      "description": "Thick handmade corn tortillas topped with tender barbacoa beef, onions, cilantro, and a drizzle of spicy salsa.",
+      "price": 15.99
+    },
+    {
+      "name": "Chiles en Nogada",
+      "section": "Main Courses",
+      "description": "Roasted poblano peppers stuffed with a mixture of ground beef and fruits, topped with walnut cream sauce and pomegranate seeds.",
+      "price": 16.99
+    },
+    {
+      "name": "Birria Tacos",
+      "section": "Main Courses",
+      "description": "Tacos filled with slow-cooked birria (spiced stewed beef) and served with a side of consommé for dipping.",
+      "price": 14.99
+    },
+    {
+      "name": "Molotes",
+      "section": "Main Courses",
+      "description": "Fried masa patties filled with black beans, cheese, and your choice of chorizo or mushrooms, topped with crema and queso fresco.",
+      "price": 13.99
+    },
+    {
+      "name": "Elote Asado",
+      "section": "Sides",
+      "description": "Grilled corn on the cob slathered in mayonnaise, cotija cheese, chili powder, and lime juice.",
+      "price": 4.99
+    },
+    {
+      "name": "Arroz Rojo",
+      "section": "Sides",
+      "description": "Mexican-style red rice cooked with tomatoes, garlic, and onions.",
+      "price": 3.99
+    },
+    {
+      "name": "Tamarindo Margarita",
+      "section": "Beverages",
+      "description": "A tangy and sweet margarita made with tamarind pulp, tequila, and lime juice.",
+      "price": 7.99
+    },
+    {
+      "name": "Jamaica Agua Fresca",
+      "section": "Beverages",
+      "description": "Hibiscus-infused water, lightly sweetened and served over ice.",
+      "price": 2.99
+    },
+    {
+      "name": "Mexican Hot Chocolate",
+      "section": "Beverages",
+      "description": "Rich and creamy hot chocolate with a hint of cinnamon and vanilla, topped with whipped cream.",
+      "price": 4.49
+    },
+    {
+      "name": "Churros",
+      "section": "Desserts",
+      "description": "Crispy fried dough pastries dusted with cinnamon sugar and served with a side of chocolate dipping sauce.",
+      "price": 5.99
+    },
+    {
+      "name": "Tres Leches Cake",
+      "section": "Desserts",
+      "description": "A moist sponge cake soaked in three types of milk, topped with whipped cream and fresh strawberries.",
+      "price": 6.99
+    },
+    {
+      "name": "Flan",
+      "section": "Desserts",
+      "description": "Creamy caramel custard with a silky smooth texture and a sweet caramel sauce drizzle.",
+      "price": 5.49
+    },
+    {
+      "name": "Mexican Fried Ice Cream",
+      "section": "Desserts",
+      "description": "Vanilla ice cream coated in a crispy cinnamon-sugar shell, topped with whipped cream and honey.",
+      "price": 6.49
+    }
+  ]
+  
