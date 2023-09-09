@@ -7,19 +7,6 @@ const Home = function() {
     return(
         <div id="home_page_container">
             <img id='civiche_image' src={ceviche}></img>
-            {/* <div id="join_the_club">
-                <div id="join_the_club_text" className="col-lg-6">
-                    <h1 id="join_the_club_header" >JOIN THE *_______* CLUB!</h1>
-                    <h2 id="news_and_offers">*_____* NEWS & OFFERS DELIVERED TO YOUR INBOX</h2>
-                </div>
-                <div id="join_the_club_form" className="col-lg-6" >
-                    <div id="club_inputs" className="row">
-                        <input className="col-10 col-sm-5 custom_input" ></input>
-                        <input className="col-10 col-sm-5 custom_input"></input>
-                    </div>
-                    <button id="club_submit">SUBMIT</button>
-                </div>
-            </div> */}
             <div id="join_the_club">
                 <div id="join_the_club_text_raw" >
                     <h1 id="join_the_club_header" >JOIN THE *_______* CLUB!</h1>
@@ -27,8 +14,14 @@ const Home = function() {
                 </div>
                 <div id="join_the_club_form_raw" >
                     <div id="club_inputs_raw" >
-                        <input className="custom_input" ></input>
-                        <input className="custom_input"></input>
+                        <div className="input_container">
+                            <input className="custom_input" id="name_input"></input>
+                            <label htmlFor="name_input">Name</label>
+                        </div>
+                        <div className="input_container">
+                            <input className="custom_input" id='email_input'></input>
+                            <label htmlFor="email_input">Email</label>
+                        </div>
                     </div>
                     <button id="club_submit">SUBMIT</button>
                 </div>
