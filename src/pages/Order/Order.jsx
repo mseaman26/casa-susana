@@ -63,7 +63,7 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
         <>
         <div id="overlay_container">
             <div id="order_container">
-                <div className="order_header">
+                <div className="order_header" style={{backgroundColor: itemFormShown ? 'purple' : ''}}>
                     {orderHeaderButtonShown ? (
                         <button></button>
                     ) : <></>}
@@ -82,7 +82,10 @@ const Order = function ({ order, setOrder, menuData, setOrder1Shown }){
                                 <div id="cart_quantity">{getOrderQuantity()}</div>
                             ) : <></>}
                             </div>
-                            <div id="order_close_button" onClick={()=>setOrder1Shown(false)}>CLOSE X</div>
+                            {currentTab !== 'review' ? (
+                                 <div id="order_close_button" onClick={()=>setOrder1Shown(false)}>CLOSE X</div>
+                            ) : <></>}
+                           
                             </>
                         )}
                         
