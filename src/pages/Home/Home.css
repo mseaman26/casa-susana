@@ -72,10 +72,10 @@
     margin-left: 10px;
     margin-right: 10px;
     position: relative;
+    transform: translateX(-13px);
+    
 }
-.input_container{
-    position: relative;
-}
+
 .input_container label{
     position: absolute;
     left: 30px;
