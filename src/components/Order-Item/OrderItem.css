@@ -183,6 +183,7 @@
         height: 100%;
         top: 60px;
         transform: translateX(-10px);
+      
     }
     .item_form_overlay{
         display: none;
@@ -196,6 +197,7 @@
         bottom: 0px;
         box-shadow: none;
         padding: 0px;
+        overflow-y: scroll;
     }
     .add_to_cart_orange{
         width: 100%;
