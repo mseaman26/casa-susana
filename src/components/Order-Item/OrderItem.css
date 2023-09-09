@@ -194,7 +194,7 @@
     .add_to_cart_div_large_screen{
         background-color: transparent;
         position: sticky;
-        bottom: 0px;
+        bottom: 0vh;
         box-shadow: none;
         padding: 0px;
         overflow-y: scroll;
