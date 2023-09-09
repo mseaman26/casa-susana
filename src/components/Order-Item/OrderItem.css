@@ -198,6 +198,7 @@
         box-shadow: none;
         padding: 0px;
         overflow-y: scroll;
+        transform: translateY(-60px);
     }
     .add_to_cart_orange{
         width: 100%;
