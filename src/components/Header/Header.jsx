@@ -2,6 +2,7 @@ import React, {useState, useEffect}from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './Header.css'
 import logo_placeholder from '../../assets/images/logo_placeholder.png'
+import logo from '../../assets/images/Mama_Suzana_Mexican Cantina__CircleFullLogo.png'
 import orderOnlineImage from '../../assets/images/order-now.png'
 import NavMenuDropBox from '../NavMenuDropBox/NavMenuDropBox';
 import { slide as Menu } from 'react-burger-menu';
@@ -72,7 +73,7 @@ function Header() {
         
         <nav className='custom_nav'>
             <div id='nav_left'>
-                <NavLink to="/" activeclassname="active"><img src={logo_placeholder} id='logo'></img></NavLink>
+                <NavLink to="/" activeclassname="active"><img src={logo} id='logo'></img></NavLink>
             </div>
             <div id='nav_right'>
             {showMenu ? (
