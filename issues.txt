@@ -11,4 +11,5 @@ Extra Large (xl): 1200px and above
 -"+" and "-" buttons within mobil item form look like shit
 -add to cart button can be hidden by address bar at bottom
 -add email.js to form
+-complete review page
 

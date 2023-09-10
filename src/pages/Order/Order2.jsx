@@ -82,7 +82,9 @@ const Order2 = function ({ order2, setOrder2, menuData, setOrder2Shown }){
                                 <div id="cart_quantity">{getOrderQuantity()}</div>
                             ) : <></>}
                             </div>
-                            <div id="order_close_button" onClick={()=>setOrder2Shown(false)}>CLOSE X</div>
+                            {currentTab !== 'review' ? (
+                                 <div id="order_close_button" onClick={()=>setOrder1Shown(false)}>CLOSE X</div>
+                            ) : <></>}
                             </>
                         )}
                         
