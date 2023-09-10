@@ -80,7 +80,7 @@ function Header() {
                   <Menu className={`col-6 bm-menu-wrap ${menuOpen ? 'bm-menu-open' : ''}`} right isOpen={menuOpen} onStateChange={(state) => setMenuOpen(state.isOpen)} overlay>
                     <a className="menu-item" onClick={toggleMenuBurgerHeight} id='menu_burger_nav'>
                       MENU
-                      <div id='burger_submenu' style={{ height: isExpanded ? 'fit-content' : '0px', border: isExpanded ? '1px solid black' : 'none', marginTop: isExpanded ? '20px' : '0px' }}>
+                      <div id='burger_submenu' style={{ height: isExpanded ? '80px' : '0px', border: isExpanded ? '1px solid black' : 'none', marginTop: isExpanded ? '20px' : '0px',transition: 'height 0.3s ease'}}>
                         <div id='burger_location1'><a href='/#/menu/location1' onClick={closeMenu}>location1</a></div>
                         <div><a href='/#/menu/location2' onClick={closeMenu}>location2</a></div>
                       </div>

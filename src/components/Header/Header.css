@@ -178,9 +178,8 @@
         margin-top: 20px;
         height: 0px;
         overflow: hidden;
-        background-color: rgb(149, 215, 42);
-  
-        
+        background-color: rgb(149, 215, 42); 
+        transition: height 0.3s ease;
     }
     #burger_submenu a{
         position: relative;
