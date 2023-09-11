@@ -12,7 +12,7 @@ const Footer = () => {
                 <NavLink className='footer_nav_link' to='/ourstory' activeclassname="active">OUR STORY</NavLink>
                 <NavLink className='footer_nav_link' to='/orderlocations' activeclassname="active">LOCATIONS</NavLink>
             </div>
-            <p id="copyright">&copy;</p>
+            <p id="copyright">&copy; Casa Susana</p>
         </nav>
     )
     
