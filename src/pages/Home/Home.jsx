@@ -43,7 +43,7 @@ const Home = function() {
         <div id="home_page_container">
             <div id="civiche_container">
                 <img id='civiche_image' src={ceviche}></img>
-                <h1>Savor the taste of Mexico!"</h1>
+                <h1>Savor the taste of Mexico!</h1>
             </div>
 
             <div id="join_the_club">
