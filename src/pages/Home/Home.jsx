@@ -41,7 +41,11 @@ const Home = function() {
 
     return(
         <div id="home_page_container">
-            <img id='civiche_image' src={ceviche}></img>
+            <div id="civiche_container">
+                <img id='civiche_image' src={ceviche}></img>
+                <h1>Savor the taste of Mexico!"</h1>
+            </div>
+
             <div id="join_the_club">
                 <div id="join_the_club_text_raw" >
                     <h1 id="join_the_club_header" >JOIN THE CASA SUSANA CLUB!</h1>
