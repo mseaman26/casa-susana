@@ -26,6 +26,7 @@
     padding: 0;
     word-wrap: break-word;
     text-indent: 70px;
+    padding-inline: 10px;
 }
 @media screen and (max-width: 992px) {
     .our_story_container{
