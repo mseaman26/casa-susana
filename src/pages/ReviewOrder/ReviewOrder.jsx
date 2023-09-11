@@ -83,12 +83,13 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
                         <></>
                     )
                 })}
-                <h1>Subtotal: {subTotal}</h1>
-                <h1>Tax: {tax}</h1>
-                <h1>GrandTotal: {GrandTotal}</h1>
+       
             </div>
             <div className="revew_order_footer">
-                
+                <div className="place_pickup_order">
+                    <div className="subtotal"><p>SUBTOTAL</p><p>${subTotal}</p></div>
+                    <div className="place_order_button">Place Pickup Order Now</div>
+                </div>
             </div>
         </div>
     )
