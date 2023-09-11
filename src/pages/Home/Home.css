@@ -103,7 +103,7 @@
 .input_container input:focus + label
  {
 
-  top: -8px; /* Move the label up when input is in focus or has a value */
+  top: -7px; /* Move the label up when input is in focus or has a value */
   left: 10px; /* Adjust as needed */
   font-size: 12px; /* Optional: Reduce font size when label is floating */
  /* Optional: Change label color when floating */

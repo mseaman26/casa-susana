@@ -94,7 +94,7 @@ function Header() {
                     <a className="menu-item" href="/#/ourstory" onClick={closeMenu}>
                       OUR STORY
                     </a>
-                    <a className="menu-item" href="/#/locations" onClick={closeMenu}>
+                    <a className="menu-item" href="/#/orderlocations" onClick={closeMenu}>
                       LOCATIONS
                     </a>
                   </Menu>
@@ -109,7 +109,7 @@ function Header() {
                       
                     </NavLink>
                     </div>
-                    <NavLink to="/locations" activeclassname="active" className='nav_link'>
+                    <NavLink to="/orderlocations" activeclassname="active" className='nav_link'>
                       <div className='nav_item_right'>LOCATIONS</div>
                     </NavLink>
                     <NavLink to="/ourstory" activeclassname="active" className='nav_link'>

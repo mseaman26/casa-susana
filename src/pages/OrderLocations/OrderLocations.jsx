@@ -33,13 +33,13 @@ const OrderLocations = ({order, setOrder, order2, setOrder2}) => {
             <p>*No Refunds are given for selecting the incorrect pick-up location for online orders.</p>
             <div id="order_location_choices">
                 <div className="order_location_choice">
-                    <h1>Location 1</h1>
-                    <p>street address<br/>city state<br/>1(555)-555-5555</p>
+                    <h1>Parker, CO</h1>
+                    <p>456 Oakwood Lane<br/>Parker, CO 80138<br/>(303) 622-0088</p>
                     <Link className="order_location_link" onClick={()=>setOrder1Shown(true)}>ORDER NOW</Link> 
                 </div>
                 <div className="order_location_choice">
-                    <h1>Location 2</h1>
-                    <p>street address<br/>city state<br/>1(555)-555-5555</p>
+                    <h1>Kentfield, CA</h1>
+                    <p>237 Elmwood Road<br/>Kentfield, CA 94947<br/>(415) 376-7788</p>
                     <Link className="order_location_link" onClick={()=>setOrder2Shown(true)}>ORDER NOW</Link>
                 </div>
             </div>

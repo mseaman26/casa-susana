@@ -9,6 +9,7 @@ import ReviewOrder from './pages/ReviewOrder/ReviewOrder';
 import Checkout from './pages/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
 import OrderLocations from './pages/OrderLocations/OrderLocations';
+import OurStory from './pages/OurStory/OurStory.jsx'
 import menuData1 from '../src/assets/menu1.json'
 import menuData2 from '../src/assets/menu2.json'
 import './App.css'
@@ -44,6 +45,7 @@ useEffect(() => {
           <Route path='/locations' element={<Contact/>}></Route>
           <Route path='/order/review' element={<ReviewOrder order={order} setOrder={setOrder} menuData={menuData1}/>}></Route>
           <Route path='/order/checkout' element={<Checkout/>}></Route>
+          <Route path='/ourstory' element={<OurStory/>}></Route>
         </Routes>
         <Footer/>
         {/* </> */}
