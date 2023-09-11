@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import './Home.css'
 import ceviche from '../../assets/images/civiche.jpeg'
 import tacos from '../../assets/images/tacos_cropped.jpeg'
+import emailjs from 'emailjs-com'
+
+
+
+
 
 const Home = function() {
+
+    const [email, setEmail] = useState('')
+    const [name, setName] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    
+        emailjs.send(
+            'service_603mx0m',
+            'template_x04vxpm',
+            {
+                to_email: 'mseaman26@gmail.com',
+                message: `${name} filled out the form on the casa susana site lol. their reply email is ${email}`
+            },
+            'u1xtN4l27HdhYjBd0'
+        )
+        .then((result) => {
+            console.log(result.text);
+            setEmail('')
+            setName('')
+            document.getElementById('name_input').value = ''
+            document.getElementById('email_input').value = ''
+            if(result.text === 'OK'){
+                alert('Welcome to the Casa Susana club!! You will be hearing from us soon!')
+            }
+            }, (error) => {
+            console.log(error.text);
+            });
+    }
+
     return(
         <div id="home_page_container">
             <img id='civiche_image' src={ceviche}></img>
@@ -15,15 +50,19 @@ const Home = function() {
                 <div id="join_the_club_form_raw" >
                     <div id="club_inputs_raw" >
                         <div className="input_container">
-                            <input className="custom_input" id="name_input"></input>
+                            <input className="custom_input"id="name_input" onChange={(e) => {
+                                setName(e.target.value)
+                            }}></input>
                             <label htmlFor="name_input">Name</label>
                         </div>
                         <div className="input_container">
-                            <input className="custom_input" id='email_input'></input>
+                            <input className="custom_input" type="email"  id='email_input' onChange={(e) => {
+                                setEmail(e.target.value)
+                            }}></input>
                             <label htmlFor="email_input">Email</label>
                         </div>
                     </div>
-                    <button id="club_submit">SUBMIT</button>
+                    <button id="club_submit" onClick={handleSubmit}>SUBMIT</button>
                 </div>
             </div>
             <div id="food_sell_div" >

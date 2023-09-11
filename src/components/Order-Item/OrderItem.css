@@ -75,12 +75,16 @@
     width: 100%;
 }
 .input_container div{
+    display: flex;
     position: absolute;
     height: 40px;
     right: -4px;
     top: 4px
 }
 .input_container button{
+    justify-content: center;
+    align-items: center;
+    display: flex;
     height: 38px;
     width: 38px;
     margin-left: 5px;
