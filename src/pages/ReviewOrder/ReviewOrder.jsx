@@ -74,7 +74,7 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
       }, []);
 
     return(
-        <div className="review_order_container">
+        <div className="review_order_container" ref={reviewContainerRef}>
             <div className="review_order_body"> 
                 <div className="check_location_review">{checkLocationText}</div>
                 <div className="not_taking_orders">{notTakingOrdersTextTop}<br/><br/>{notTakingOrdersTextBottom}<a href={`tel:18312479385`}>1-(831)-247-9385</a></div>
