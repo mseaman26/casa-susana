@@ -7,5 +7,5 @@ Extra Large (xl): 1200px and above
 -couldn't get hamburger menu to come from left
 -couldn't get smooth transition on darkening background when burger menu opens
 -"+" and "-" buttons within mobil item form look like shit
--add email.js to form
+-scroll to right part of page when, say, footer button is clicked
 

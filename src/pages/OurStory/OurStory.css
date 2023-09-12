@@ -38,3 +38,9 @@
         font-size: 48px;
     }
 }
+@media screen and (max-width: 768px) {
+    .our_story_container p{
+        font-size: 18px;
+        text-indent: 20px;
+    }
+}
