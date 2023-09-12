@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import './ReviewOrder.css'
 
 
 const ReviewOrder = function ({ order, setOrder, menuData }){
+
+    const reviewContainerRef= useRef(null)
 
     let orderArray = []
     console.log(order)
@@ -64,6 +66,12 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
 
     const notTakingOrdersTextTop = 'Sorry, we are not taking online orders right now, but check back soon to see if we are available to take your order'
     const notTakingOrdersTextBottom = 'You may still call us for other matters at: '
+
+    useEffect(() => {
+        if (reviewContainerRef.current) {
+            reviewContainerRef.current.scrollTop = 0; 
+        }
+      }, []);
 
     return(
         <div className="review_order_container">
