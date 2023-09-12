@@ -44,3 +44,8 @@
         text-indent: 20px;
     }
 }
+@media screen and (max-width: 576px) {
+    .our_story_container{
+        margin-top: 0px;
+    }
+}
