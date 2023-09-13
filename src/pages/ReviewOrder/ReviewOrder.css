@@ -2,6 +2,7 @@
     background-color: #e5e5e5;
     height: 100vh;
     position: relative;
+    width: 100%;
 }
 .review_order_body{
     padding-top: 17px;
@@ -27,6 +28,33 @@
     font-weight: bold;
     font-size: 14px;
 }
+.order_review_head{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+.order_review_head p{
+    display: inline;
+}
+.order_review_body{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr; 
+    position: relative;
+}
+.price_and_remove_button{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.order_review_body p{
+    display: inline;
+    margin: 10px
+}
+.order_review_totals{
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+}
+.order_review_totals p,h3{
+    margin: 10px;
+}
 .revew_order_footer{
     position: fixed;
     bottom: 18px;
@@ -39,8 +67,10 @@
     box-sizing: border-box;
     width: 100%;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    left: 0px;
+    right: 0px;
 
-    left: 0;
+
     transform: translateY(17px);
 }
 .place_pickup_order{
