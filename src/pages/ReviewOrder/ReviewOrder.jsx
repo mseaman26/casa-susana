@@ -92,7 +92,7 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
                                     <p>{orderItem.quantity}</p>
                                     <p>{orderItem.name}</p>
                                     <div className="price_and_remove_button">
-                                    <p>{prices[1]}</p><button onClick={() => clearItem(orderItem.name)}>X</button>
+                                        <div>{prices[1]}</div><div onClick={() => clearItem(orderItem.name)}>X</div>
                                     </div>
                                     {/* <div key={index} className="review_item">
                                         <h3>{orderItem.name}: Quantity: {orderItem.quantity}, Price: {prices[0]}, Item Total: {prices[1]}</h3>
@@ -115,7 +115,7 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
             </div>
             <div className="revew_order_footer">
                 <div className="place_pickup_order">
-                    <div className="subtotal"><p>SUBTOTAL</p><p>${subTotal}</p></div>
+                    <div className="subtotal"><p>TOTAL</p><p>${GrandTotal}</p></div>
                     <div className="place_order_button">Place Pickup Order Now</div>
                 </div>
             </div>
