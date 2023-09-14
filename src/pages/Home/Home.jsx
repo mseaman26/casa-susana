@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { animateScroll as scroll } from 'react-scroll';
 import './Home.css'
 import ceviche from '../../assets/images/civiche.jpeg'
 import tacos from '../../assets/images/tacos_cropped.jpeg'
@@ -48,6 +49,11 @@ const Home = function() {
         }
         
     }
+
+    useEffect(() => {
+        // Scroll to the top of the page on component mount
+        scroll.scrollToTop();
+    }, []);
 
     return(
         <div id="home_page_container">

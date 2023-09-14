@@ -1,8 +1,7 @@
-import React from "react";
-
+import React, {useEffect} from "react";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import './Menu.css'
-import { animateScroll as scroll, scroller } from "react-scroll";
+import { animateScroll as scroll } from 'react-scroll';
 import civiche from '../../assets/images/civiche.jpeg'
 
 
@@ -18,14 +17,11 @@ const Menu = function({menuData}){
          groupedMenuData[section].push(menuItem);
      });
 
-    const scrollToSection = (section) => {
-        scroller.scrollTo(section, {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutQuart',
-            offset: -120
-        });
-    };
+
+    useEffect(() => {
+        // Scroll to the top of the page on component mount
+        scroll.scrollToTop();
+    }, [menuData]);
 
     return(
         <>
