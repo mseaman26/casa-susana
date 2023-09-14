@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { animateScroll as scroll } from 'react-scroll';
 import './OurStory.css'
 
 const OurStory = () => {
+
+    useEffect(() => {
+        // Scroll to the top of the page on component mount
+        scroll.scrollToTop();
+    }, []);
+
     return (
         <div className="our_story_container">
             <h1>Our Story</h1>

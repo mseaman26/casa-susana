@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { animateScroll as scroll } from 'react-scroll';
 import './OrderLocations.css'
 import civiche from '../../assets/images/civiche.jpeg'
 import { Link } from "react-router-dom";
@@ -12,7 +13,10 @@ const OrderLocations = ({order, setOrder, order2, setOrder2}) => {
     const [oder1shown, setOrder1Shown] = useState(false)
     const [order2Shown, setOrder2Shown] = useState(false)
 
-    
+    useEffect(() => {
+        // Scroll to the top of the page on component mount
+        scroll.scrollToTop();
+    }, [order2Shown, oder1shown]);
 
     return(
         <>
