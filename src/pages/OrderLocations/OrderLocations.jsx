@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './OrderLocations.css'
 import civiche from '../../assets/images/civiche.jpeg'
 import { Link } from "react-router-dom";
@@ -6,12 +6,13 @@ import Order from "../Order/Order";
 import Order2 from '../Order/Order2'
 import menuData1 from '../../assets/menu1.json'
 import menuData2 from '../../assets/menu2.json'
-import shoppingCartImage from '../../assets/images/shoppingCart.png'
 
 const OrderLocations = ({order, setOrder, order2, setOrder2}) => {
 
     const [oder1shown, setOrder1Shown] = useState(false)
     const [order2Shown, setOrder2Shown] = useState(false)
+
+    
 
     return(
         <>
