@@ -21,6 +21,10 @@ const Home = function() {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(isValidEmail(email) && name){
+            setEmail('')
+            setName('')
+            document.getElementById('name_input').value = ''
+            document.getElementById('email_input').value = ''
             emailjs.send(
                 'service_603mx0m',
                 'template_x04vxpm',
@@ -32,10 +36,7 @@ const Home = function() {
             )
             .then((result) => {
                 console.log(result.text);
-                setEmail('')
-                setName('')
-                document.getElementById('name_input').value = ''
-                document.getElementById('email_input').value = ''
+                
                 if(result.text === 'OK'){
                     alert('Welcome to the Casa Susana club!! You will be hearing from us soon!')
                 }
