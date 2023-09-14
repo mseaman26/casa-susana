@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import closeIcon from '../../assets/images/icons8-close-30.png'
 import './ReviewOrder.css'
 
 
@@ -92,7 +92,7 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
                                     <p>{orderItem.quantity}</p>
                                     <p>{orderItem.name}</p>
                                     <div className="price_and_remove_button">
-                                        <div>{prices[1]}</div><div onClick={() => clearItem(orderItem.name)}>X</div>
+                                        <div>{prices[1]}</div><div className='remove_item_button_container' onClick={() => clearItem(orderItem.name)}><img className="remove_item_button" src={closeIcon}/></div>
                                     </div>
                                     {/* <div key={index} className="review_item">
                                         <h3>{orderItem.name}: Quantity: {orderItem.quantity}, Price: {prices[0]}, Item Total: {prices[1]}</h3>
@@ -105,11 +105,13 @@ const ReviewOrder = function ({ order, setOrder, menuData }){
                     </div>
                     <div className="order_review_totals">
                         <p>Sub-Total</p>
-                        <p>{subTotal}</p>
+                        <p className="total_right">{subTotal}</p>
+                        <div></div>
                         <p>Tax</p>
-                        <p>{tax}</p>
+                        <p className="total_right">{tax}</p>
+                        <div></div>
                         <h3>Total</h3>
-                        <h3>{GrandTotal}</h3>
+                        <h3 className="total_right">{GrandTotal}</h3>
                     </div>
                 </div>
             </div>
