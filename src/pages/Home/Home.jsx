@@ -13,30 +13,39 @@ const Home = function() {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
 
+    function isValidEmail(email) {
+        const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+        return emailPattern.test(email);
+      }
+
     const handleSubmit = (e) => {
         e.preventDefault()
-    
-        emailjs.send(
-            'service_603mx0m',
-            'template_x04vxpm',
-            {
-                to_email: 'mseaman26@gmail.com',
-                message: `${name} filled out the form on the casa susana site lol. their reply email is ${email}`
-            },
-            'u1xtN4l27HdhYjBd0'
-        )
-        .then((result) => {
-            console.log(result.text);
-            setEmail('')
-            setName('')
-            document.getElementById('name_input').value = ''
-            document.getElementById('email_input').value = ''
-            if(result.text === 'OK'){
-                alert('Welcome to the Casa Susana club!! You will be hearing from us soon!')
-            }
-            }, (error) => {
-            console.log(error.text);
-            });
+        if(isValidEmail(email) && name){
+            emailjs.send(
+                'service_603mx0m',
+                'template_x04vxpm',
+                {
+                    to_email: 'mseaman26@gmail.com',
+                    message: `${name} filled out the form on the casa susana site lol. their reply email is ${email}`
+                },
+                'u1xtN4l27HdhYjBd0'
+            )
+            .then((result) => {
+                console.log(result.text);
+                setEmail('')
+                setName('')
+                document.getElementById('name_input').value = ''
+                document.getElementById('email_input').value = ''
+                if(result.text === 'OK'){
+                    alert('Welcome to the Casa Susana club!! You will be hearing from us soon!')
+                }
+                }, (error) => {
+                console.log(error.text);
+                });
+        }else{
+            alert('Form was not properly filled out with a name and a valid email')
+        }
+        
     }
 
     return(
