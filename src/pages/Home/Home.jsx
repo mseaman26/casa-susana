@@ -17,7 +17,7 @@ const Home = function() {
     function isValidEmail(email) {
         const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
         return emailPattern.test(email);
-      }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -67,7 +67,7 @@ const Home = function() {
                     <h1 id="join_the_club_header" >JOIN THE CASA SUSANA CLUB!</h1>
                     <h2 id="news_and_offers">CASA SUSANA NEWS & OFFERS DELIVERED TO YOUR INBOX</h2>
                 </div>
-                <div id="join_the_club_form_raw" >
+                <form id="join_the_club_form_raw" onSubmit={handleSubmit}>
                     <div id="club_inputs_raw" >
                         <div className="input_container">
                             <input className="custom_input"id="name_input" onChange={(e) => {
@@ -83,7 +83,7 @@ const Home = function() {
                         </div>
                     </div>
                     <button id="club_submit" onClick={handleSubmit}>SUBMIT</button>
-                </div>
+                </form>
             </div>
             <div id="food_sell_div" >
                 <div id="food_sell_text">
