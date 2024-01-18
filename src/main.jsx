@@ -6,7 +6,6 @@ import Menu from './pages/Menu/Menu';
 import Order from './pages/Order/Order';
 import Contact from './pages/Contact/Contact';
 import ReviewOrder from './pages/ReviewOrder/ReviewOrder';
-import Checkout from './pages/Checkout/Checkout';
 import OrderLocations from './pages/OrderLocations/OrderLocations';
 
 const router = createBrowserRouter([{
@@ -32,10 +31,6 @@ const router = createBrowserRouter([{
     {
       path: '/order/review',
       element: <ReviewOrder/>
-    },
-    {
-      path: '/order/checkout',
-      element: <Checkout/>
     },
     {
       path: '/orderlocations',

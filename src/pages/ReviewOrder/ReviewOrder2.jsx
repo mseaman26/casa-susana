@@ -1,9 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import closeIcon from '../../assets/images/icons8-close-30.png'
+import closeIcon from '../../assets/images/red_x.png'
+import { animateScroll as scroll } from 'react-scroll';
 import './ReviewOrder.css'
 
 
 const ReviewOrder2 = function ({ order2, setOrder2, menuData }){
+
+    useEffect(() => {
+        // Scroll to the top of the page on component mount
+        scroll.scrollToTop();
+    }, []);
 
     const reviewContainerRef= useRef(null)
 

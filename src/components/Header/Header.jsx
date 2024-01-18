@@ -83,8 +83,8 @@ function Header() {
                     <a className="menu-item" onClick={toggleMenuBurgerHeight} id='menu_burger_nav'>
                       MENU
                       <div id='burger_submenu' style={burgerSubmenuStyles}>
-                        <div id='burger_location1'><a href='/#/menu/location1' onClick={closeMenu}>location1</a></div>
-                        <div><a href='/#/menu/location2' onClick={closeMenu}>location2</a></div>
+                        <div id='burger_location1'><a href='/#/menu/location1' onClick={closeMenu}>Parker, CO Menu</a></div>
+                        <div><a href='/#/menu/location2' onClick={closeMenu}>Kentfield, CA Menu</a></div>
                       </div>
                     </a>
                     

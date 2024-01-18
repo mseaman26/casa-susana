@@ -6,7 +6,7 @@ import Menu from './pages/Menu/Menu';
 import Order from './pages/Order/Order';
 import Contact from './pages/Contact/Contact';
 import ReviewOrder from './pages/ReviewOrder/ReviewOrder';
-import Checkout from './pages/Checkout/Checkout';
+// import Checkout from './pages/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
 import OrderLocations from './pages/OrderLocations/OrderLocations';
 import OurStory from './pages/OurStory/OurStory.jsx'
@@ -38,13 +38,13 @@ useEffect(() => {
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/menu' element={<Menu/>}></Route>
-          <Route path='/menu/location1' element={<Menu menuData={menuData1}/>}></Route>
-          <Route path='/menu/location2' element={<Menu menuData={menuData2}/>}></Route>
+          <Route path='/menu/location1' element={<Menu menuData={menuData1} location={'Parker, CO Menu'}/>}></Route>
+          <Route path='/menu/location2' element={<Menu menuData={menuData2} location={'Kentfield, CA Menu'}/>}></Route>
           <Route path='/orderlocations' element={<OrderLocations order={order} order2={order2} setOrder={setOrder} setOrder2={setOrder2} />}></Route>
           {/* <Route path='/orderlocations/location1' element={<Order order={order} setOrder={setOrder} menuData={menuData1}/>}></Route> */}
           <Route path='/locations' element={<Contact/>}></Route>
           <Route path='/order/review' element={<ReviewOrder order={order} setOrder={setOrder} menuData={menuData1}/>}></Route>
-          <Route path='/order/checkout' element={<Checkout/>}></Route>
+          {/* <Route path='/order/checkout' element={<Checkout/>}></Route> */}
           <Route path='/ourstory' element={<OurStory/>}></Route>
         </Routes>
         <Footer/>

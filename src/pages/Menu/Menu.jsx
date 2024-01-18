@@ -6,7 +6,7 @@ import civiche from '../../assets/images/civiche.jpeg'
 
 
 
-const Menu = function({menuData}){
+const Menu = function({menuData, location}){
 
     const groupedMenuData = {};
      menuData.forEach(menuItem => {
@@ -40,6 +40,7 @@ const Menu = function({menuData}){
             </div> */}
             <img src={civiche} id="civiche_image_menu"></img>
             <div className="menu_items_container">
+                <h1 className="location_header">{location}</h1>
                 {Object.keys(groupedMenuData).map(section => (
                     <div key={section} className="menu_section" id={section}>
                         <h2 className="menu_section_header">{section}</h2>

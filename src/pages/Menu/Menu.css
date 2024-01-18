@@ -25,6 +25,16 @@
 .menu_section{
     margin-top: 50px;
 }
+.location_header{
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: Lato;
+    font-weight: 700;
+    font-style: normal;
+    color: #545454;
+    text-decoration: underline;
+}
 .menu_section_header{
     text-align: center;
     font-size: 24px;

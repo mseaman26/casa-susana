@@ -7,8 +7,8 @@ const Footer = () => {
         <nav id="footer">
             <div id="footer_nav_container">
                 <NavLink className='footer_nav_link' to='/orderlocations' activeclassname="active">ORDER ONLINE</NavLink>
-                <NavLink className='footer_nav_link' to='/menu/location1' activeclassname="active">LOCATION 1 MENU</NavLink>
-                <NavLink className='footer_nav_link' to='/menu/location2' activeclassname="active">LOCATION 2 MENU</NavLink>
+                <NavLink className='footer_nav_link' to='/menu/location1' activeclassname="active">PARKER, CO MENU</NavLink>
+                <NavLink className='footer_nav_link' to='/menu/location2' activeclassname="active">KENTFIELD, CA MENU</NavLink>
                 <NavLink className='footer_nav_link' to='/ourstory' activeclassname="active">OUR STORY</NavLink>
                 <NavLink className='footer_nav_link' to='/orderlocations' activeclassname="active">LOCATIONS</NavLink>
             </div>
