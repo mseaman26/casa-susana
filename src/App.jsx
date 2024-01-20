@@ -18,7 +18,7 @@ import './App.css'
 
 function App() {
 
-  const [order, setOrder] = useState(JSON.parse(localStorage.getItem('order1'))|| {})
+  const [order, setOrder] = useState(JSON.parse(localStorage.getItem('order'))|| {})
     console.log(order)
   
   const [order2, setOrder2] = useState(JSON.parse(localStorage.getItem('order2'))|| {})
