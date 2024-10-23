@@ -47,8 +47,14 @@ const OrderItem = function({ menuItem, order, setOrder, index, setOrderHeaderBut
     }
     function handleItemQuantityChange(event) {
 
-        const newValue = event.target.value;
-
+        let newValue = event.target.value;
+        if(isNaN(newValue) || newValue === ''){
+            console.log('not a number')
+            setItemQuantity(0).toFixed(2)
+            setItemTotal(0*menuItem.price).toFixed(2)
+            newValue = 0
+            return
+        }
         if(parseInt(newValue) < 1){
             console.log(parseInt(newValue))
             setItemQuantity(0).toFixed(2)
